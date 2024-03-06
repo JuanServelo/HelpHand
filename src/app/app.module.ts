@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { LogotipoCadComponent } from './logotipo-cad/logotipo-cad.component';
 import { CadastroUserComponent } from './cadastro-user/cadastro-user.component';
+import { LandapageComponent } from './landapage/landapage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutoComponent,
     LogotipoCadComponent,
-    CadastroUserComponent
+    CadastroUserComponent,
+    LandapageComponent
   ],
   imports: [
     BrowserModule,
