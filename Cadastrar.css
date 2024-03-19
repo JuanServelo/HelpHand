@@ -1,20 +1,15 @@
 /* GERAL */
-.html{
-    font-family: "Inter", sans-serif;
+html{
+    font-family: "Inter";
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-variation-settings:"slnt" 0;
-    padding: 0;
-    margin: 0;
+    font-variation-settings:"slnt" 0; 
 }
 .row{
     margin: 0;
     padding: 0;
     height: 100vh;
-}
-.col-lg-6{
-    padding: 0;
 }
 /* CELULAR*/
 @media (max-width: 999px) {
@@ -99,11 +94,6 @@
     }
 }
 @media (min-width: 999px) {
-    .cadastro, .corpo {
-        width: 100vw;
-        padding: 0;
-        margin: 0;
-    }
     /* logo */
     .conj_text {
         display: flex;
@@ -112,7 +102,10 @@
         margin-top: 2vh;
         font-size: 2vi;
     }
-    
+    .col-lg-6 {
+        width: 100%;
+        height: 100%;
+    }
     .div_image {
         display: flex;
         margin-top: 35%;
@@ -128,9 +121,10 @@
     }
     /* Cadastro*/
     .form_cadastro {
-        padding: 4vw 4vw 0 4vw;
+        padding: 0 4vw 0 4vw;
         display: grid;
         width: 50vw;
+        height: 100%;
     }
     .seletor_text, .bt_cadastrar {
         width: 80vw;
@@ -150,6 +144,7 @@
         margin: 0;
         display: flex;
         align-items: center;
+        max-width: none;
     }
     #row{ /* row do site */
         display: flex;
@@ -164,7 +159,7 @@
     }
     #mao_img{
         width: 18vw;
-        height: 18vh;
+        height: 23vh;
     }
     #botao{
         color: white;
@@ -173,9 +168,10 @@
         border-radius: 25px;
         font-size: 2vi;
         margin-left: 20%;
+        border: solid #304b47;
     }
     #label{
-        font-size: 2vi;
+        font-size: 1vi;
         margin: 0;
     }
 }

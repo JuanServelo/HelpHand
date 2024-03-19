@@ -8,13 +8,12 @@
     <title>HelpHand</title>
 </head>
 <body>
-
     <div class="container" id="site">
         <div class="row" id="row">
             <div class="col-lg-6">
                 <div class="cadastro">
                     <h1 class="titulo_cad">Cadastrar</h1>
-                    <form action="/cadastrar" method="post" class="form_cadastro">
+                    <form action="Cadastrar.php" method="post" class="form_cadastro">
                         <label id="label">Nome</label>
                         <input type="text" id="nome" name="nome" required class="form-control mb-3" placeholder="Digite seu nome de usuário">
                         <label id="label">Email</label>
@@ -33,7 +32,7 @@
                         <input type="text" id="cep" name="cep" required class="form-control mb-3" placeholder="Digite seu cep" pattern="\d{5}-\d{3}" title="Digite um CEP válido no formato XXXXX-XXX">
                         <label id="label">Senha</label>
                         <input type="password" id="senha" name="senha" required class="form-control mb-3" placeholder="Digite sua senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial">
-                        <input type="submit" value="Cadastrar" class="btn btn-primary" id="botao">
+                        <input type="submit" value="Cadastrar" id="botao">
                     </form>
                 </div>
             </div>
@@ -53,3 +52,4 @@
     </div>
 </body>
 </html>
+<?php
