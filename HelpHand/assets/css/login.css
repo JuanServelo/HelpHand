@@ -1,124 +1,155 @@
-@import url(global.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-.cadastro{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+:root {
+    --cor-principal: #304b47;
 }
 
-.corpo{
-    width:50%;
-    height:100%;
-    margin: 0%;
-    background-color: #304b47;
+body {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif ;
 }
 
-ul {
-    display: flex;
-    flex-direction: row;
+.logo {
+    background: var(--cor-principal);
+}
+
+.logo ul {
     list-style: none;
-    gap: 40px;
-    margin-top: 30px;
-    justify-content: center;
-    padding: 0;
 }
 
-.navegation__link {
-    font-weight: 500;
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-}
-
-.div_image{
-    width: 60%;
-    height: 30%;
-    margin-top: 25%;
-    margin-left: 20%;
-    display: flex;
-}
-
-.img{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-}
-
-.conj_text_titulo{ 
+.logo ul li a {
+    color: white;
     font-weight: 600;
-    font-style: normal;
-    color: #fff;
-    font-size: 80px;
-    margin: 0;
-    padding: 5px;
+    font-size: 1.3em;
 }
 
-.div_form{
-    width:50%;
-    height:100%;
-    margin: 0%;
-}
-.form_cadastro{
+.img__container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 25%;
+    margin-top: 25%; 
 }
 
-.input__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 43px;
-    padding: 0 58px 0 40px;
-    font-size: 18px;
-    width: 60%;
+form a {
+    color: var(--cor-principal);
 }
 
-.input__field {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 3px;
-    justify-content: center;
+.btn {
+    border: 1px solid var(--cor-principal);
 }
 
-.seletor_text{
-    font-size: 18px;
-    width: 100%;
-    padding: 2%;
-    border-radius: 15px;
-    border: 1px solid #304b47;
+.btn:hover {
+    background: var(--cor-principal);
+    color: white;
 }
 
-.titulo_cad{
-    font-weight: weight;
-    font-style: normal;
-    color: black;
-    font-size: 30px;
+/*Mobile*/
+
+@media (max-width: 999px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo { 
+        position: relative;
+        height: 28vh;
+        width: 100%;
+    }
+
+    .logo ul li a {
+        display: none;
+    }
+
+    .img__container{
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        
+        left: 30%;
+        z-index: 1;
+        margin: 0;
+        width: 40%;
+    }
+
+    img {
+        position: relative;
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        height: 100%;
+    }
+
+    form {
+        margin: 8% 0;
+        position: relative;
+    }
+
+    form #cadastrar_link {
+        margin: auto;
+    }
+
+    button {
+        margin: 15px auto;
+    }
+
+    footer {
+        bottom: 0;
+        background: var(--cor-principal);
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-#forgout-pw {
-    color: #304b47;
-    margin-top: 15px;
-    text-decoration: underline;
-    font-weight: 500;
-    font-size: 20px;
-}
+/*Desktop*/
 
-.bt_cadastrar{
-    padding: 9px 99px;
-    margin-top: 22px;
-    border: none;
-    border-radius: 30px;
-    background: #304b47;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
+@media (min-width: 999px) {
+    .logo {
+        width: 50%;
+    }
+
+    .logo ul {
+        justify-content: center;
+        gap: 10%;
+        margin-top: 12%;
+        padding: 0;
+    }
+
+    .img__container {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 5%;
+        width: 40%;
+        margin: 0;    
+    }
+
+    .img__container a:hover {
+        cursor: default;
+    }
+
+    img {
+        position: relative;
+        width: 100%;
+    }
+
+    main {
+        width: 50%;
+    }
+
+    form #cadastrar_link {
+        display: none;
+    }
+
+    button {
+        margin: auto;
+    }
+
+    footer {
+        display: none;
+    }
 }
