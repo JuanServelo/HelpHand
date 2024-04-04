@@ -1,0 +1,177 @@
+/* GERAL */
+html{
+    font-family: "Inter";
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"slnt" 0; 
+}
+.row{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+/* CELULAR*/
+@media (max-width: 999px) {
+    .cadastro, .corpo {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    /* logo */
+    .conj_text {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+    
+    .div_image {
+        display: flex;
+        margin-top: 5px;
+    }
+    
+    .text_titulo {
+        font-size: 5vi;
+        color: white;
+    }
+    .text{
+        color: white;
+    }
+    /* Cadastro*/
+    .form_cadastro {
+        padding: 4vw;
+        display: grid;
+    }
+    .seletor_text, .bt_cadastrar {
+        width: 80vw;
+    }
+    .titulo_cad{
+        font-size: 8vi;
+        color: black;
+        display: flex;
+        justify-content: center;
+    }
+    /* IDS*/
+    #site{  /* principal div */
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    #row{ /* row do site */
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: nowrap;
+        flex-direction: column-reverse;
+        padding: 0;
+        justify-content: flex-end;
+    }
+    #div_HELP {
+        background-color: #304b47;
+        width: 100vw;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 2vh;
+    }
+    #mao_img{
+        width: 12vw;
+        height: 7vh;
+    }
+    #botao{
+        color: white;
+        background-color: #304b47;
+        width: 35vw;
+        border-radius: 25px;
+        font-size: 3vi;
+    }
+    #label{
+        font-size: 3vi;
+        margin: 0;
+    }
+}
+@media (min-width: 999px) {
+    /* logo */
+    .conj_text {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 2vh;
+        font-size: 2vi;
+    }
+    .col-lg-6 {
+        width: 100%;
+        height: 100%;
+    }
+    .div_image {
+        display: flex;
+        margin-top: 35%;
+        justify-content: center;
+    }
+    
+    .text_titulo {
+        font-size: 5vi;
+        color: white;
+    }
+    .text{
+        color: white;
+    }
+    /* Cadastro*/
+    .form_cadastro {
+        padding: 0 4vw 0 4vw;
+        display: grid;
+        width: 50vw;
+        height: 100%;
+    }
+    .seletor_text, .bt_cadastrar {
+        width: 80vw;
+    }
+    .titulo_cad{
+        margin-top: 3vh;
+        font-size: 4vi;
+        color: black;
+        display: flex;
+        justify-content: center;
+        width: 50vW;
+    }
+    #site{  /* principal div */
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        max-width: none;
+    }
+    #row{ /* row do site */
+        display: flex;
+        padding: 0;
+    }
+    #div_HELP {
+        background-color: #304b47;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    #mao_img{
+        width: 18vw;
+        height: 23vh;
+    }
+    #botao{
+        color: white;
+        background-color: #304b47;
+        width: 25vw;
+        border-radius: 25px;
+        font-size: 2vi;
+        margin-left: 20%;
+        border: solid #304b47;
+    }
+    #label{
+        font-size: 1vi;
+        margin: 0;
+    }
+}
