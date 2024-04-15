@@ -131,7 +131,7 @@ html{
     }
     .titulo_cad{
         margin-top: 3vh;
-        font-size: 4vi;
+        font-size: 3vi;
         color: black;
         display: flex;
         justify-content: center;
@@ -171,7 +171,7 @@ html{
         border: solid #304b47;
     }
     #label{
-        font-size: 1vi;
+        font-size: 0.9vi;
         margin: 0;
     }
 }

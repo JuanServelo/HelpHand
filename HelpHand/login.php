@@ -1,3 +1,20 @@
+<?php
+include_once 'sessao.php';
+
+if (isset($_COOKIE['biscoito'])) {
+    $_SESSION['email'] = $_COOKIE['biscoito'];
+    $_SESSION['logged'] = True;
+    header('Location: index.php');
+    exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $P_email = $_POST['email'] ?? NULL;
+    $P_senha = $_POST['senha'] ?? NULL;
+    verificarCredenciais($P_email, $P_senha);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,11 +29,11 @@
 
 <body class="container-fluid d-flex p-0 m-0 min-vh-100">
     <div class="logo">
-            <ul class="d-flex  ">
-                <li><a href="#" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
-                <li><a href="#"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Fale Conosco</a></li>
-                <li><a href="#"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Cadastre-se</a></li>
-            </ul>
+        <ul class="d-flex  ">
+            <li><a href="#" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
+            <li><a href="#"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Fale Conosco</a></li>
+            <li><a href="#"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Cadastre-se</a></li>
+        </ul>
         <div class="img__container">
             <a href="#">
                 <img src="assets/img/logo_branca.png" alt="" >
@@ -24,9 +41,15 @@
         </div>
     </div>
     <main class="d-flex justify-content-center align-items-center">
-        <form action="" class="d-flex gap-4 flex-column w-75">
-            <h2 class="text-center fw-bold pe-none">Login</h2>
 
+        <form action="" method="POST" class="d-flex gap-4 flex-column w-75">
+            <h2 class="text-center fw-bold pe-none">Login</h2>
+            <?php
+                if (isset($_SESSION['erro'])) {
+                    echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";   
+                    unset($_SESSION['erro']);                 
+                }
+                $_SESSION['teste'] = "Teste"; ?>
             <div class="input">
                 <ion-icon name="mail-outline"></ion-icon>
                 <label for="email" class="form-label">E-mail</label>
@@ -39,27 +62,14 @@
                 <label for="password" class="form-label">Senha</label>
                 <input type="password" class="form-control" name="senha" required class="seletor_text" 
                     placeholder="Digite sua senha"
-                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])
-                    [A-Za-z\d@$!%*?&]{8,}$">
-
-                    <!--
-                        <div class="form-text text-center">
-                            Sua senha deve conter pelo menos 8 caracteres, incluindo 
-                            uma letra maiúscula, uma letra minúscula, um número e um 
-                            caractere especial.
-                        </div>
-                    -->
+                    >
             </div>
 
             <a href="#" class="text-center link-offset-2">Esqueceu a senha?</a>
-            <a href="#" class="text-center link-offset-2" id="cadastrar_link">Não tem uma conta? Cadastre-se! </a>
 
-            <button type="submit" class="btn btn-outline w-50">Entrar</button>
+            <input type="submit" class="btn btn-outline w-50"></input>
         </form>
 
-        <footer class="d-flex flex-row position-fixed">
-            <a href="#"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Fale Conosco</a>
-        </footer>
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
