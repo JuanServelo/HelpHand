@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+h1{
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    left: 800px;
+    top: 40px;
+}
+
+ .fc{
+    background-color: #304B47 ;
+    width: 1700px;
+    height: 750px;
+    border-radius: 50px;
+    position: absolute;
+    left: 100px;
+    top: 190px
+ }
+
+ .Perfil {
+    font-family: 'Inter', sans-serif;
+     margin-left: 1700px;
+     top: 130px;
+     position: absolute;
+     text-decoration: underline; 
+ }
+
+
+ .ativ {
+    font-family: 'Inter', sans-serif;
+    margin-left: 1550px;
+    margin-top: 150px;
+    text-decoration: underline; 
+    
+ }
+
+ .add {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    z-index: 1;
+    left: 840px;
+    
+ }
+
+ .img1 {
+    position: absolute;
+    z-index: 1;
+    left: 332px;
+    top: 295px;
+    border: none;
+ }
+
+ .img2 {
+    left: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    
+ }
+
+ .enc1 {
+    position: absolute;
+    top: 310px;
+    left: -515px;
+    color: white;
+ }
+
+ .b1 {
+    position: absolute;
+    left: 260px;
+    top: 440px;
+    background-color: white; /* Cor de fundo */
+    color: #304B47; /* Cor do texto */
+    border-radius: 20px; /* Raio da borda */
+    font-family: 'Inter', sans-serif; /* Fonte */
+    padding: 10px 60px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Define a grossura da fonte como negrito */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Cursor ao passar por cima */
+ }
+
+ .encanador2 {
+    position: absolute;
+    z-index: 1;
+ }
+
+ .enc2 {
+   position: absolute;
+   top: 200px;
+   left:-715px;
+   color: white;
+
+    
+ }
+ .img3 {
+   left: 800px;
+   position: absolute;
+
+   top: 120px;
+ }
+
+ .img4 {
+   position: absolute;
+   z-index: 1;
+   left: -30px;
+   top: -5px;
+   border: none;
+ }
+ .b2 {
+   position: absolute;
+   left: 770px;
+   top: 125px;
+   background-color: white; /* Cor de fundo */
+   color: #304B47; /* Cor do texto */
+   border-radius: 20px; /* Raio da borda */
+   font-family: 'Inter', sans-serif; /* Fonte */
+   padding: 10px 60px; /* Espaçamento interno */
+   font-size: 16px; /* Tamanho da fonte */
+   font-weight: bold; /* Define a grossura da fonte como negrito */
+   border: none; /* Remove a borda */
+   cursor: pointer; /* Cursor ao passar por cima */
+}
+.encanador3 {
+   position: absolute;
+   z-index: 1; }
+
+.img5 {
+   position: absolute;
+   left: 1270px;
+   top: 130px;
+}
+
+.img6 {
+   position: absolute;
+   top: -10px;
+   right: 5px;
+}
+
+.enc3 {
+   position: absolute;
+   z-index: 1;
+   left: -720px;
+   top: 200px;
+   color: white;
+}
+
+.b3 {
+   position: absolute;
+   left: 770px;
+   top: 130px;
+   background-color: white; /* Cor de fundo */
+   color: #304B47; /* Cor do texto */
+   border-radius: 20px; /* Raio da borda */
+   font-family: 'Inter', sans-serif; /* Fonte */
+   padding: 10px 60px; /* Espaçamento interno */
+   font-size: 16px; /* Tamanho da fonte */
+   font-weight: bold; /* Define a grossura da fonte como negrito */
+   border: none; /* Remove a borda */
+   cursor: pointer; /* Cursor ao passar por cima */
+
+}
+
+.ms {
+   position: absolute;
+   left: 830px;
+}
+
+.log {
+   position: absolute;
+   top: -140px;
+   left: 120px;
+}
+
+.mao {
+   position: absolute;
+   left: 220px;
+   top: -170px;
+}
+
+.pranch {
+   position: absolute;
+   z-index: 1;
+   left: 1560px;
+   top: -140px;
+}
+
+.user {
+   position: absolute;
+   z-index: 1;
+   left: 1680px;
+   top: -140px;
+}
+
+.av1 {
+   position: absolute;
+
+   color: white;
+   left: 820px;
+   top: 180px;
+   font-family: 'Inter', sans-serif;
+   text-decoration: underline; 
+   font-size: 13px;
+}
