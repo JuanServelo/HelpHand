@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-principal: #304b47;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif ;
+}
+
+.maozinha {
+    width: 5%;
+}
+
+main {
+    background: #304B47;
+}
