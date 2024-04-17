@@ -1,3 +1,7 @@
+<?php
+session_start();
+include_once 'sessao.php';
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -33,11 +37,11 @@
 </head>
 
 <body class="bg-white">
-  <nav class="navbar fixed-top" style="background-color: #304B47;">
+  <nav class="navbar fixed-top">
     <div class="container-fluid">
-      <button class="navbar-toggler align-items-center" type="button" style="border-style: hidden;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      <button class="navbar-toggler align-items-center bg-fff" type="button" style="border-style: hidden; width:50vw" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <img src="assets/img/maozinha.png" class="img-fluid float-start rounded mx-auto d-block " width="10%" alt="">
+        <img src="assets/img/logo_preta.png" class="img-fluid float-start rounded mx-auto d-block " width="15%" alt="">
         <h1 class="text-white">HelpHand</h1></img>
       </button>
       <form class="d-flex" role="search">
@@ -61,7 +65,7 @@
               <a class="nav-link" href="FAQ.html">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Logout</a>
+              <a class="nav-link" href="./sairusuario.php">Logout</a>
             </li>
           </ul>
         </div>
@@ -74,6 +78,7 @@
         <div class="card" style="width: 18rem;">
           <img src="assets/img/maozinha.png" class="card-img-top bg-warning" alt="...">
           <div class="card-body">
+          <h1></h1>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
           </div>
@@ -112,6 +117,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>
