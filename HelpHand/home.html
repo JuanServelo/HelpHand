@@ -7,53 +7,118 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <title>Home</title>
 </head>
-<body class="p-0 m-0 min-vh-100">
+<body class="min-vh-100">
     <header>
-        <nav class="d-flex">
-            <div class="container w-25 d-flex justify-content-center align-items-center ">
-                <a class="navbar-brand" href="#">
-                  <img src="assets/img/logo_preta.png" alt="logo HelpHand" width="150" height="70">
-                </a>
-            </div>
-            
-            <div class="container-fluid p-0 d-flex justify-content-center align-items-center">
-                <form class="d-flex w-50 " role="search">
-                    <input class="form-control me-2 w-100" type="search" placeholder="Search" aria-label="Search">
-                    <!--<button class="btn btn-outline-success " type="submit">Search</button>-->
-                </form>
+        <nav class="navbar shadow"">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 13%;">
+                    <img src="assets/img/logo_preta.png" class="img-fluid float-start rounded mx-auto d-block " width="100%" alt="">
+                </button>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> 
             </div>
         </nav>
+    
+      <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen m-0">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
+                            <img src="assets/img/logo_preta.png" alt="">
+                        </h1>
+                        <button type="button" class="btn-close w-25 h-25" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ol class="d-flex flex-column ml-4 mt-2 ">
+                            <a href="#">
+                                <ion-icon name="settings-outline"></ion-icon>
+                                Serviços
+                            </a>
+                            <a href="#">
+                                <ion-icon name="refresh-outline"></ion-icon>
+                                Histórico
+                            </a>
+                            <a href="#">
+                                <ion-icon name="help-circle-outline"></ion-icon>
+                                FAQ
+                            </a>
+                        </ol>
+                    </div>     
+                    <div class="modal-footer  ">
+                        <a href="#" class="d-flex justify-content-center align-items-center">
+                            <img src="assets/img/user 1.png" alt="">
+                            <h3>Nome do Usuário</h3>
+                        </a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     
-    <div class="container d-flex flex-column">
-        <h1>Bem-vindo!</h1>
+    <div class="texto d-flex flex-column p-0">
+        <h1>Bem-vindo!</h1> <!-- colocar peso bold ou mais -->
         <h2>Ache aqui a <img src="assets/img/maozinha 1.png" alt="mãozinha" class="maozinha"> <br>
         para os seus problemas.</h2>
     </div>
     
-    <main class="container">
+    <main class="d-flex justify-content-center align-items-center"> <!--tinha container aq-->
+        <div class="wrapper">
+            
+            <div class="carrossel">
+                <div class="card">
+                    <img src="assets/img/encanador.png" alt="">
+                    <h2>Encanador</h2>
+                    <button>Ver Mais</button>
+                </div> 
 
-        <div class="carrossel d-flex align-items-end">
-            <div class="card">
-                <img src="#" alt="">
-                <h2>Encanador</h2>
-                <button>Ver Mais</button>
-            </div>
-            <div class="card">
-                <img src="#" alt="">
-                <h2>Encanador</h2>
-                <button>Ver Mais</button>
-            </div>
-            <div class="card">
-                <img src="#" alt="">
-                <h2>Encanador</h2>
-                <button>Ver Mais</button>
+                <div class="card">
+                    <img src="assets/img/encanador.png" alt="">
+                    <h2>Encanador</h2>
+                    <button>Ver Mais</button>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/encanador.png" alt="">
+                    <h2>Encanador</h2>
+                    <button>Ver Mais</button>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/encanador.png" alt="">
+                    <h2>Encanador</h2>
+                    <button>Ver Mais</button>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/encanador.png" alt="">
+                    <h2>Encanador</h2>
+                    <button>Ver Mais</button>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/encanador.png" alt="">
+                    <h2>Encanador</h2>
+                    <button>Ver Mais</button>
+                </div>
             </div>
         </div>
     </main>
-</body>
 
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const myCarousel = document.querySelector('#carouselExampleIndicators')
+        const carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 2000,
+            touch: false
+        })
+    </script>
+</body>
 </html>
