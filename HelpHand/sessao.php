@@ -36,7 +36,7 @@
                 else{
                     if (mysqli_num_rows($result) == 0) { 
                         $_SESSION['erro'] = "E-mail não encontrado!"; 
-                        echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>"; 
+                        echo "<div class='alert alert-danger' role='alert' style='position: fixed; top: 0; left: 0; width: 100%;'>$_SESSION[erro]</div>";
                         unset($_SESSION['erro']); 
                         return; 
                     }
@@ -48,7 +48,6 @@
                         $_SESSION['email'] = $_COOKIE['biscoito'];
                         $_SESSION['erro'] = "Conectado com sucesso!";
                         setcookie('biscoito', $P_email, time() + 60 * 60 * 24 * 30);
-                        setcookie('tipo', $admin, time() + 60 * 60 * 24 * 30);
                         echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";
                         unset($_SESSION['erro']);
                         header('Location: ./index.php');
