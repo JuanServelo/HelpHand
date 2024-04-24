@@ -42,23 +42,17 @@
                     }
                     $row = mysqli_fetch_row($result);
                     $senha_do_bd = $row[0]; 
-                    if (password_verify($P_senha, $senha_do_bd)) {
-                        setcookie('biscoito', 'True', time() + 3600, '/');
-                        if (isset($_COOKIE['biscoito'])) {
-                            $_SESSION['email'] = $_COOKIE['biscoito'];
-                            $_SESSION['erro'] = "Conectado com sucesso!";
-                            echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";
-                            unset($_SESSION['erro']);
-                            header('Location: ./index.php');
-                            exit;
-                        }
-                        else{
-                            $_SESSION['erro'] = "Erro ao manter login!";
-                            echo $senha_do_bd;
-                            echo $P_email;
-                            echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";
-                            unset($_SESSION['erro']);
-                        }
+                    if (password_verify($P_senha, $senha_do_bd)) {                
+                        $logged = True;
+                        $_SESSION['logged'] = $logged;
+                        $_SESSION['email'] = $_COOKIE['biscoito'];
+                        $_SESSION['erro'] = "Conectado com sucesso!";
+                        setcookie('biscoito', $P_email, time() + 60 * 60 * 24 * 30);
+                        setcookie('tipo', $admin, time() + 60 * 60 * 24 * 30);
+                        echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";
+                        unset($_SESSION['erro']);
+                        header('Location: ./index.php');
+                        exit;
                     } else {
                         $_SESSION['erro'] = "Senha incorreta!";
                         echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";
