@@ -32,7 +32,11 @@
                         <label id="label">Nome</label>
                         <input type="text" id="nome" name="nome" required class="form-control mb-3" placeholder="Digite seu nome de usuário">
                         <label id="label">Email</label>
-                        <input type="text" id="Email" name="Email" required class="form-control mb-3" placeholder="Digite seu Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Digite um endereço de email válido">
+                        <input type="text" id="Email" name="Email" required class="form-control mb-3" placeholder="Digite seu Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Digite um endereço de email válido">
+                        <label id="label">Telefone</label>
+                        <input type="text" id="Telefone" name="Telefone" required class="form-control mb-3" placeholder="Digite seu Telefone" pattern="^\d{2} \d{5}-\d{4}$" title="Digite um telefone: 99 99999-9999">
+                        <label id="label">CPF</label>
+                        <input type="text" id="CPF" name="CPF" required class="form-control mb-3" placeholder="Digite seu CPF" pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$" title="Digite um CPF: 123.456.789-10">
                         <label id="label">Data De Nascimento</label>
                         <input type="date" id="data_nascimento" name="data_nascimento" required class="form-control mb-3" placeholder="Digite sua data de nascimento">
                         <label id="label">Gênero</label>
@@ -43,7 +47,7 @@
                             <option value="Outros">Outros</option>
                         </select>
                         <label id="label">Senha</label>
-                        <input type="password" id="senha" name="senha" required class="form-control mb-3" placeholder="Digite sua senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial">
+                        <input type="password" id="senha" name="senha" required class="form-control mb-3" placeholder="Digite sua senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$" title="A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial">
                         <label id="label">Confirme sua senha</label>
                         <input type="password" id="senha_confirmacao" name="senha_confirmacao" required class="form-control mb-3" placeholder="Confirme sua senha" title="Confirme sua senha">
                         <input type="submit" value="Cadastrar" id="botao">

@@ -1,5 +1,8 @@
 <?php
-session_start();    
-setcookie('biscoito', '', 0);
-header('Location: /localhost/HelpHand/login.php');
+session_start();
+unset($_SESSION['senha']);
+unset($_SESSION['email']);  
+setcookie('biscoito', '', time() - 3600);
+header('Location: login.php');
 exit;
+?>

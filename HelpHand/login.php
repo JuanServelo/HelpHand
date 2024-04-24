@@ -8,11 +8,6 @@ if (isset($_COOKIE['biscoito'])) {
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $P_email = $_POST['email'] ?? NULL;
-    $P_senha = $_POST['senha'] ?? NULL;
-    verificarCredenciais($P_email, $P_senha);
-}
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body class="container-fluid d-flex p-0 m-0 min-vh-100">
     <div class="logo">
         <ul class="d-flex  ">
-            <li><a href="#" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
+            <li><a href="index.php" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
             <li><a href="#"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Fale Conosco</a></li>
-            <li><a href="#"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Cadastre-se</a></li>
+            <li><a href="cadastro.php"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Cadastre-se</a></li>
         </ul>
         <div class="img__container">
             <a href="#">
@@ -48,8 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if (isset($_SESSION['erro'])) {
                     echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";   
                     unset($_SESSION['erro']);                 
-                }
-                $_SESSION['teste'] = "Teste"; ?>
+                }?>
             <div class="input">
                 <ion-icon name="mail-outline"></ion-icon>
                 <label for="email" class="form-label">E-mail</label>
