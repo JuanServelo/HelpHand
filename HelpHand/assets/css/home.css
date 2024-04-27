@@ -69,15 +69,22 @@
     font-size: 2rem;
 }
 
-main {
+.container-fluid button img {
+    width: 13%;
+}
+
+.container-fluid form {
     display: flex;
+}
+
+main {
+    position: absolute;
     background: #304B47;
     margin: 1% auto;
     border-radius: 30px;
     overflow-x: auto;
     max-width: 88vw;
     padding: 2%;
-    position: absolute;
     bottom: 2%;
     transform: translatex(-50%);
     left: 50%;
@@ -106,13 +113,13 @@ main::-webkit-scrollbar-thumb {
     background: transparent;
     border-radius: 20px;
     border: 3px solid white;
-    width: calc(100% / 3);
+    /*width: calc(100% / 3);*/
     height: 300px;
-    margin-left: 14px;
+    /*margin-left: 14px;*/
 }
 
 .card:first-child {
-    margin-left: 0;
+    margin-left: 9%;
 }
 
 .card img {
@@ -138,31 +145,40 @@ main::-webkit-scrollbar-thumb {
     text-decoration: none;
 }
 
+.modal-footer button {
+    margin: auto;
+}
+
 @media (max-width: 999px) {
-    .container-fluid navbar-toggler {
-        width: 100%;
+    .container-fluid button img {
+        width: 40%;
     }
-
-    .container-fluid navbar-toggler img {
-        width: 100%;
-    }
-
+    
     .container-fluid form {
-        width: 70%;
+        display: none;
     }
-
+    
     main {
         flex-direction: column;
         align-items: center;
     }
 
+    .wrapper {
+        padding-top: 12px;
+    }
+
+    .card:first-child {
+        margin: auto;
+    }
+
     .card {
         width: 100%;
+        height: 200px;
         margin-left: 0;
     }
 
     .card img {
-        padding: 30px 0 0 0;
+        width: 130px;
     }
 
     .card h2 {
@@ -170,12 +186,10 @@ main::-webkit-scrollbar-thumb {
     }
 
     .card button {
-        width: 80%;
+        display: hidden;
     }
 
-    .texto {
-        margin: 4% 0 0 0;
-    }
+    
 
     .texto h1 {
         font-size: 2rem;
@@ -190,34 +204,38 @@ main::-webkit-scrollbar-thumb {
     }
 
     .modal{
-        width: 80%;
-    }
-
-    .modal-header h1 img {
-        width: 80%;
-    }   
+        width: 50%;
+    } 
 
     .modal-content{
         width: 100%;
         height: 100vh;
     }       
 
-    .modal-body ol a {
-        font-size: 1rem;
+    .modal-header h1 img {
+        width: 80%;
+    }
+    
+    .modal-footer {
+        padding: 0;
+        width: 100%;
     }
 
     .modal-footer a {
-        margin-right: 0;
+        margin: 0;
     }
 
-    .modal-footer a img{
-        width: 20%;
-        padding: 20px;
+    .modal-footer a img {
+        margin: 10px 0 0 10px;
     }
 
     .modal-footer a h3 {
-        margin-left: 0;
-        font-size: 1.2rem;
+        margin: 0;
+        width: 80;
+        height: 80px;
+        font-size: 1rem;
+        text-align:center;
+        padding-top: 19px;
     }
 
     .carrossel {
