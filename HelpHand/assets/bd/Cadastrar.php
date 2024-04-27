@@ -1,15 +1,7 @@
 <?php
 session_start();
-// Conexão com o banco de dados
-global $servername;
-global $username;
-global $password;
-global $database;
-// Dados do banco de dados 
-$servername = "localhost:3306";
-$username = "root";
-$password = "PUC@1234";
-$database = "HelpHand";
+
+require 'conectar.php';
 
 function verificarsenha($P_senha, $P_senha_confirmacao) {
     $servername = "localhost:3306";

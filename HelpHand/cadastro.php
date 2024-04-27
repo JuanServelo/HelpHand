@@ -29,10 +29,11 @@
                             unset($_SESSION['erro']);                 
                         }
                     ?>
+                    //manter as informções com variavel de sessao
                         <label id="label">Nome</label>
                         <input type="text" id="nome" name="nome" required class="form-control mb-3" placeholder="Digite seu nome de usuário">
                         <label id="label">Email</label>
-                        <input type="text" id="Email" name="Email" required class="form-control mb-3" placeholder="Digite seu Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Digite um endereço de email válido">
+                        <input type="text" id="Email" name="Email" required class="form-control mb-3" placeholder="Digite seu Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Digite um endereço de email válido">
                         <label id="label">Telefone</label>
                         <input type="text" id="Telefone" name="Telefone" required class="form-control mb-3" placeholder="Digite seu Telefone" pattern="^\d{2} \d{5}-\d{4}$" title="Digite um telefone: 99 99999-9999">
                         <label id="label">CPF</label>
@@ -57,7 +58,7 @@
 
             <div class="col-lg-6" id="div_HELP">
                 <div class="conj_text">
-                    <a href="./index.php" class="text">Home</a>
+                    <a href="usuario/index.php" class="text">Home</a>
                     <a href="#" class="text">Fale Conosco</a>
                     <a href="./login.php" class="text">Entrar</a>
                 </div>

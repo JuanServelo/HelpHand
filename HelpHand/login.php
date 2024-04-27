@@ -1,10 +1,8 @@
 <?php
-include_once 'sessao.php';
+include_once 'assets/bd/sessao.php';
 
-if (isset($_COOKIE['biscoito'])) {
-    $_SESSION['email'] = $_COOKIE['biscoito'];
-    $_SESSION['logged'] = True;
-    header('Location: index.php');
+if ($_SESSION['logged']) {
+    header('Location: usuario/index.php');
     exit;
 }
 
@@ -25,7 +23,7 @@ if (isset($_COOKIE['biscoito'])) {
 <body class="container-fluid d-flex p-0 m-0 min-vh-100">
     <div class="logo">
         <ul class="d-flex  ">
-            <li><a href="index.php" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
+            <li><a href="usuario/index.php" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
             <li><a href="#"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Fale Conosco</a></li>
             <li><a href="cadastro.php"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Cadastre-se</a></li>
         </ul>
