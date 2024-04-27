@@ -102,7 +102,7 @@ include_once '../assets/bd/sessao.php';
         echo "</td>";
         ?>
         <td>
-          <a href='medAtualizar.php?id=<?php echo $cod; ?>'><img src='../assets/img/Edit.png' title='Editar Usuario'
+          <a href='updateUser.php?id=<?php echo $cod; ?>'><img src='../assets/img/Edit.png' title='Editar Usuario'
               width='32'></a>
         </td>
         <td>
