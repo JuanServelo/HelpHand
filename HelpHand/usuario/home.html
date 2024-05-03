@@ -1,38 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/HelpHand/assets/css/home.css">
-    <title>Home</title>
+    <title>Document</title>
 </head>
-<body class="min-vh-100">
+<body>
     <header>
-        <nav class="navbar ">
-            <div class="container-fluid container__navbar">
-                <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="/HelpHand/assets/img/logo_preta.png" class="img-fluid float-start rounded mx-auto d-block " width="100%" alt="">
-                </button>
-                <form role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> 
-            </div>
+        <nav class="navbar p-0">
+            <button class="logo_maozinha navbar-toggler p-0" type="button" 
+            data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
+                <img src="/HelpHand/assets/img/logo_preta.png" 
+                class="img-fluid float-start rounded d-block" width="100%" alt="">
+            </button>
+
+            <button type="menu" class="menu d-flex flex-column align-items-center"
+            data-bs-toggle="modal" data-bs-target="#modal_menu">
+                <span><ion-icon name="menu-outline"></ion-icon></span>
+            </button>
         </nav>
+
+        <form class="search_container" role="search">
+            <input class="form-control me-2" type="search" 
+            placeholder="Procure um serviço" aria-label="Search">
+            <button type="submit">
+                <span style="font-size: 1.5rem;"><ion-icon name="search-outline"></ion-icon></span> 
+            </button>
+        </form> 
     
-      <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal top-down-fade" id="modal_menu" tabindex="-1"
+        aria-labelledby="modal_menu" aria-hidden="true"> <!-- modal do mobile -->
             <div class="modal-dialog modal-fullscreen m-0">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
-                            <img src="/HelpHand/assets/img/logo_preta.png" alt="">
+                    <div class="modal-header p-0">
+                        <h1 class="modal-title fs-5 text-center" 
+                        id="modal_menu">
+                            <img src="/HelpHand/assets/img/logo_preta.png" width="100%" alt="">
                         </h1>
-                        <button type="button" class="btn-close w-25 h-25" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" 
+                        data-bs-dismiss="modal" aria-label="Close">
+                        <span><ion-icon name="close-circle-outline"></ion-icon></span>
+                        </button>
                     </div>
-                    <div class="modal-body">
-                        <ol class="d-flex flex-column ml-4 mt-2 ">
+                    <div class="modal-body p-0">
+                        <ol class="d-flex flex-column p-0">
                             <a href="#">
                                 <ion-icon name="settings-outline"></ion-icon>
                                 Serviços
@@ -47,77 +60,127 @@
                             </a>
                         </ol>
                     </div>     
-                    <div class="modal-footer  ">
-                        <a href="#" class="d-flex justify-content-center align-items-center">
+                    <div class="modal-footer d-flex justify-content-start m-3">
+                        <a class="profile_picture m-0" href="#">
                             <img src="/HelpHand/assets/img/user 1.png" alt="">
+                        </a>
+                        <a class="profile_picture-text w-75" href="#">
                             <h3>Nome do Usuário</h3>
                         </a>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal_logo_maozinha" tabindex="-1" aria-labelledby="modal_logo_maozinha" aria-hidden="true"> <!--modal do desktop-->
+            <div class="modal-dialog modal-fullscreen m-0">
+                <div class="modal-content">
+                    <div class="modal-header p-0">
+                        <h1 class="modal-title fs-5 text-center" id="modal_logo_maozinha">
+                            <img src="/HelpHand/assets/img/logo_preta.png" alt="">
+                        </h1>
+                        <button type="button" class="btn-close" 
+                        data-bs-dismiss="modal" aria-label="Close">
+                        <span><ion-icon name="close-circle-outline"></ion-icon></span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <ol class="d-flex flex-column p-0">
+                            <a href="#">
+                                <ion-icon name="settings-outline"></ion-icon>
+                                Serviços
+                            </a>
+                            <a href="#">
+                                <ion-icon name="refresh-outline"></ion-icon>
+                                Histórico
+                            </a>
+                            <a href="#">
+                                <ion-icon name="help-circle-outline"></ion-icon>
+                                FAQ
+                            </a>
+                        </ol>
+                    </div>     
+                    <div class="modal-footer d-flex justify-content-start m-3">
+                        <a href="#" class="profile_picture d-flex justify-content-center align-items-center">
+                            <img src="/HelpHand/assets/img/user 1.png" alt="">
+                        </a>
+                        <a class="profile_picture-text w-50" href="#">
+                            <h3>Nome do Usuário</h3>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+
     </header>
-    
-    <div class="texto d-flex flex-column pt-5">
-        <h1>Bem-vindo!</h1> <!-- colocar peso bold ou mais -->
-        <h2>Ache aqui a <img src="/HelpHand/assets/img/maozinha 1.png" alt="mãozinha" class="maozinha"> <br>
-        para os seus problemas.</h2>
-    </div>
-    
-    <main class="d-flex justify-content-center align-items-center"> <!--tinha container aq-->
-        <div class="wrapper"> 
-            <div class="carrossel">
-                <div class="card">
-                    <img src="/HelpHand/assets/img/encanador.png" alt="">
-                    <h2>Encanador</h2>
-                    <button>Ver Mais</button>
-                </div> 
 
-                <div class="card">
-                    <img src="/HelpHand/assets/img/encanador.png" alt="">
-                    <h2>Encanador</h2>
-                    <button>Ver Mais</button>
+    <main>
+        <div class="texto d-flex flex-column p-0">
+            <h1>Bem-vindo,</h1>
+            <h2>Ache aqui a <img src="/HelpHand/assets/img/maozinha 1.png" alt="mãozinha" class="maozinha"> 
+                para os seus problemas!</h2>
+        </div>
+
+        <div class="container pt-5">
+            <div class="carousel slide" id="ads"> <!--data-bs-ride="carousel" para rolagem automática-->
+
+                <div class="carousel-indicators">
+                    <button type="button" aria-current="true" data-bs-target="#ads" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" aria-label="slide 2" data-bs-target="#ads" data-bs-slide-to="1"></button>
+                    <button type="button" aria-label="slide 3" data-bs-target="#ads" data-bs-slide-to="2"></button>
+                </div>
+            
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card_container d-flex justify-content-center align-items-center">
+                            <div class="card_content d-flex flex-column align-items-center">
+                                <img src="../assets/img/encanador 3.png" alt="" class="d-block w-75">
+                                <h5>Encanador</h5>
+                                <button>Ver Mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card_container d-flex justify-content-center align-items-center">
+                            <div class="card_content d-flex flex-column align-items-center">
+                                <img src="../assets/img/encanador 3.png" alt="" class="d-block w-75 ">
+                                <h5>Mecânico</h5>
+                                <button>Ver Mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card_container d-flex justify-content-center align-items-center">
+                            <div class="card_content d-flex flex-column align-items-center">
+                                <img src="../assets/img/encanador 3.png" alt="" class="d-block w-75">
+                                <h5>Jardineiro</h5>
+                                <button>Ver Mais</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <img src="/HelpHand/assets/img/encanador.png" alt="">
-                    <h2>Encanador</h2>
-                    <button>Ver Mais</button>
+                <div class="botoes-carousel">
+                    <button class="carousel-control-prev" data-bs-target="#ads" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-target="#ads" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
 
-                <div class="card">
-                    <img src="/HelpHand/assets/img/encanador.png" alt="">
-                    <h2>Encanador</h2>
-                    <button>Ver Mais</button>
-                </div>
-
-                <div class="card">
-                    <img src="/HelpHand/assets/img/encanador.png" alt="">
-                    <h2>Encanador</h2>
-                    <button>Ver Mais</button>
-                </div>
-
-                <div class="card">
-                    <img src="/HelpHand/assets/img/encanador.png" alt="">
-                    <h2>Encanador</h2>
-                    <button>Ver Mais</button>
-                </div>
             </div>
         </div>
-    </main>
+    </main>    
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script>
-        const myCarousel = document.querySelector('#carouselExampleIndicators')
-        const carousel = new bootstrap.Carousel(myCarousel, {
-            interval: 2000,
-            touch: false
-        })
-    </script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
