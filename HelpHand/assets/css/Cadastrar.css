@@ -1,67 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 /* GERAL */
-html{
+html {
     font-family: "Inter";
+    /*
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-variation-settings:"slnt" 0; 
+    font-variation-settings:"slnt" 0;  
+    */
 }
-.row{
+
+.row {
     margin: 0;
     padding: 0;
     height: 100vh;
 }
+
 /* CELULAR*/
 @media (max-width: 999px) {
-    .cadastro, .corpo {
-        width: 100%;
-        height: 100%;
+    #site { 
         padding: 0;
         margin: 0;
-    }
-    /* logo */
-    .conj_text {
-        display: flex;
-        justify-content: space-between;
-        width: 50%;
-    }
-    
-    .div_image {
-        display: flex;
-        margin-top: 5px;
-    }
-    
-    .text_titulo {
-        font-size: 5vi;
-        color: white;
-    }
-    .text{
-        color: white;
-    }
-    /* Cadastro*/
-    .form_cadastro {
-        padding: 4vw;
-        display: grid;
-    }
-    .seletor_text, .bt_cadastrar {
-        width: 80vw;
-    }
-    .titulo_cad{
-        font-size: 8vi;
-        color: black;
-        display: flex;
-        justify-content: center;
-    }
-    /* IDS*/
-    #site{  /* principal div */
         width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        align-items: center;
     }
-    #row{ /* row do site */
+    
+    #row {
         display: flex;
         -ms-flex-wrap: wrap;
         flex-wrap: nowrap;
@@ -69,74 +33,227 @@ html{
         padding: 0;
         justify-content: flex-end;
     }
-    #div_HELP {
-        background-color: #304b47;
-        width: 100vw;
+
+    .header {
         display: flex;
         flex-direction: column-reverse;
-        align-items: center;
-        padding-bottom: 2vh;
-    }
-    #mao_img{
-        width: 12vw;
-        height: 7vh;
-    }
-    #botao{
-        color: white;
         background-color: #304b47;
-        width: 35vw;
-        border-radius: 25px;
-        font-size: 3vi;
-    }
-    #label{
-        font-size: 3vi;
-        margin: 0;
-    }
-}
-@media (min-width: 999px) {
-    /* logo */
-    .conj_text {
-        display: flex;
-        justify-content: space-around;
+        height: 20vh;
         width: 100%;
-        margin-top: 2vh;
-        font-size: 2vi;
+        padding: 5% 0 0 0;
     }
-    .col-lg-6 {
-        width: 100%;
-        height: 100%;
-    }
-    .div_image {
+
+    .header .div_image {
         display: flex;
-        margin-top: 35%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15%;
+        width: 35%;
+    } 
+
+    .header .conj_text {
+        display: flex;
         justify-content: center;
+        gap: 15px;
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 9%;
+    }
+
+    .header .conj_text a {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .header .conj_text a:focus {
+        color: white;
     }
     
     .text_titulo {
         font-size: 5vi;
         color: white;
     }
+    
     .text{
         color: white;
     }
+
+    .content_cadastro {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .cadastro {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .titulo_cad {
+        font-size: 8vi;
+        color: black;
+        display: flex;
+        justify-content: center;margin-top: 2.5%;
+    }
+    
+    .form_cadastro {
+        display: grid;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 130vh;
+        padding: 4vw;
+    }
+
+    #label{
+        font-weight: 600;
+        font-size: 4vi;
+        margin: 0;
+    }
+
+    .form_cadastro input {
+        height: 55%;
+        font-weight: 500;
+    }
+
+    .form_cadastro label {
+        height: 0px;
+    }
+
+    .label_container input {
+        height: 55%;
+        font-weight: 500;
+    }
+
+    .label_container .inputs label {
+       height: 45px;
+    }
+
+    .label_container .segundo {
+        margin-top: 9%;
+    }
+
+    .seletor_text, .bt_cadastrar {
+        width: 80vw;
+    }
+
+    #botao{
+        color: white;
+        background-color: #304b47;
+        width: 80%;
+        height: 70%;
+        border-radius: 25px;
+        border: 2px solid #304b47;
+        margin: auto;
+        font-size: 1.5rem;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    #botao:focus {
+        transform: scale(1.1);
+        background-color: #304b47;
+        color: white;
+    }
+
+}
+@media (min-width: 999px) {
+    .conj_text {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 5vh;
+        font-size: 2vi;
+        font-weight: 600;
+    }
+
+    .conj_text a:hover {
+        color: white;
+    }
+
+    .col-lg-6 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .div_image {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        width: 50%;
+    }
+
+    .div_image img {
+        width: 100%;
+    }
+    
+    .text_titulo {
+        font-size: 5vi;
+        color: white;
+    }
+
+    .text{
+        color: white;
+    }
+
     /* Cadastro*/
+    .cadastro {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .titulo_cad{
+        display: flex;
+        justify-content: center;
+        width: 50vW;
+        color: black;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 4%;
+    }
+
     .form_cadastro {
         padding: 0 4vw 0 4vw;
         display: grid;
         width: 50vw;
-        height: 100%;
     }
+    
+    .form_cadastro input {
+        font-weight: 500;
+    }
+
+    .label_container {
+        display: flex;
+        
+    }
+
+    .label_container .segundo {
+        margin-left: 25%;
+    }
+
+    .label_container .selecao {
+        width: 35%;
+    }
+
+    #label {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
     .seletor_text, .bt_cadastrar {
         width: 80vw;
     }
-    .titulo_cad{
-        margin-top: 3vh;
-        font-size: 3vi;
-        color: black;
-        display: flex;
-        justify-content: center;
-        width: 50vW;
-    }
+
     #site{  /* principal div */
         width: 100%;
         height: 100%;
@@ -146,32 +263,37 @@ html{
         align-items: center;
         max-width: none;
     }
+
     #row{ /* row do site */
         display: flex;
         padding: 0;
     }
-    #div_HELP {
+
+    .header {
         background-color: #304b47;
-        width: 100vw;
+        width: 90vw;
         display: flex;
         flex-direction: column;
+    }
     
-    }
-    #mao_img{
-        width: 18vw;
-        height: 23vh;
-    }
-    #botao{
-        color: white;
-        background-color: #304b47;
-        width: 25vw;
+    #botao {
+        background-color: white;
+        color: #304b47;
+        border: 2px solid #304b47;
+        width: 60%;
+        height: 60%;
         border-radius: 25px;
-        font-size: 2vi;
-        margin-left: 20%;
-        border: solid #304b47;
+        margin: 4% auto;
+        font-size: 1.5vi;
+        font-weight: 600;
+        transition: 0.3s;
     }
-    #label{
-        font-size: 0.9vi;
-        margin: 0;
+
+    #botao:hover {
+        transform: scale(1.1);
+        background-color: #304b47;
+        color: white;
     }
+
+    
 }
