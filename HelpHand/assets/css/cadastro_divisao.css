@@ -26,7 +26,6 @@ main .container_block .botoes button a {
 main .container_block .botoes button:hover, 
 main .container_block .botoes button:focus {
     background: white;
-    color: var(--cor-principal);
     border: none;
 }
 
@@ -70,4 +69,8 @@ main .container_block .botoes button a:focus {
         bottom: 10%;
         gap: 8px;
     }
+}
+
+@media (min-width: 999px) {
+    
 }
