@@ -16,7 +16,19 @@
                     <h1 class="titulo_cad">Cadastre-se</h1>
                     <form method="post" class="form_cadastro">
                         
-                        <!--tinha um bglh de php aqui-->
+                    <?php
+                    include_once '../assets/bd/Cadastrar.php';
+                    
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        $P_senha_confirmacao = $_POST['senha_confirmacao'] ?? NULL;
+                        $P_senha = $_POST['senha'] ?? NULL;
+                        verificarsenha($P_senha, $P_senha_confirmacao);
+                    }
+                        if (isset($_SESSION['erro'])) {
+                            echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";   
+                            unset($_SESSION['erro']);                 
+                        }
+                    ?>
 
                         <label id="label">Nome</label>
                         <input type="text" id="nome" name="nome" required class="form-control mb-3" placeholder="Digite seu nome de usuário">
