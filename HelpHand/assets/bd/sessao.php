@@ -83,10 +83,10 @@
                                     }
                                 } else {
                                     if (basename($_SERVER['PHP_SELF']) == 'login.php') {
-                                        header('Location: usuario/index.php');
+                                        header('Location: usuario/home.php');
                                         exit;
                                     } else {
-                                        header('Location: ../usuario/index.php');
+                                        header('Location: ../usuario/home.php');
                                         exit;
                                     }
                                 }

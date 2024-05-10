@@ -1,11 +1,6 @@
 <?php
 include_once 'assets/bd/sessao.php';
 
-if ($_SESSION['logged']) {
-    header('Location: usuario/index.php');
-    exit;
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -53,13 +48,12 @@ if ($_SESSION['logged']) {
                 <ion-icon name="lock-closed-outline"></ion-icon>
                 <label for="password" class="form-label">Senha</label>
                 <input type="password" class="form-control" name="senha" required class="seletor_text" 
-                    placeholder="Digite sua senha"
-                    >
+                    placeholder="Digite sua senha">
             </div>
 
             <a href="#" class="text-center link-offset-2">Esqueceu a senha?</a>
 
-            <input type="submit" class="btn btn-outline w-50"></input>
+            <input type="submit" class="btn btn-outline w-50 m-auto"></input>
         </form>
 
     </main>
