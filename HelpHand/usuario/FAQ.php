@@ -14,7 +14,6 @@ include_once '../assets/bd/sessao.php';
 </head>
 
 <body class="bg-white">
-<?php require '../assets/geral/menu.php'; ?>
 <?php require '../assets/geral/navbar.php'; ?>
 
   <div class="container text-center mt-2">
