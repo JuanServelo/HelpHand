@@ -223,6 +223,12 @@ a:active, a:hover {
     margin-top: 5%;
 }
 
+.card_content .card_button {
+    width: 100%;
+    background: none;
+    border: none;
+}
+
 .card_content img {
     margin: 0 auto;
 }
@@ -232,26 +238,29 @@ a:active, a:hover {
     font-size: 1.5rem;
 }
 
-.card_content button {
+.card_content .button_info {
     background: white;
     color: var(--cor-principal);
     font-weight: 500;
     font-size: 1.3rem;
     margin-top: 3%;
     width: 70%;
-    height: 12%;
+    height: 15%;
     border: 0;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out; 
 }
 
-.card_content button:hover {
-    outline: none;
+.card_content .button_info:hover {
     transform: scale(1.1);
 }
 
-.carousel-control-prev, .carousel-control-next, .carousel-control-prev:hover, .carousel-control-next:hover{
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
+.carousel-control-prev, .carousel-control-next {
+    background: none;
+    border: none;
+}
+
+.carousel-control-prev span, .carousel-control-next span {
     display: none;
 }
 
@@ -361,7 +370,7 @@ a:active, a:hover {
 
     .carousel-indicators {
         height: 5%;
-        margin-bottom: 2%;
+        margin-bottom: 1%;
         gap: 2%;
     }
 
@@ -371,7 +380,7 @@ a:active, a:hover {
     }
 
     .card_container {
-        width: 30%; 
+        width: 100%; 
     }
 
     .botoes-carousel .carousel-control-prev, .botoes-carousel .carousel-control-next {

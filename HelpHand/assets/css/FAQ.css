@@ -1,0 +1,39 @@
+:root {
+    --font: font-family: 'Inter', sans-serif;
+    --cor-principal: #304B47;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+header {
+    background: var(--cor-principal);
+}
+
+.card {
+    margin: 20px auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-bottom: 0;
+    
+}
+
+footer p {
+    font-size: 1rem;
+}
+

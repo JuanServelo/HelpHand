@@ -47,13 +47,12 @@ include_once 'assets/bd/sessao.php';
                 <ion-icon name="lock-closed-outline"></ion-icon>
                 <label for="password" class="form-label">Senha</label>
                 <input type="password" class="form-control" name="senha" required class="seletor_text" 
-                    placeholder="Digite sua senha"
-                    >
+                    placeholder="Digite sua senha">
             </div>
 
             <a href="resetSenha.php" class="text-center link-offset-2">Esqueceu a senha?</a>
 
-            <input type="submit" class="btn btn-outline w-50"></input>
+            <input type="submit" class="btn btn-outline w-50 m-auto"></input>
         </form>
 
     </main>
