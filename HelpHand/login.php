@@ -1,6 +1,5 @@
 <?php
 include_once 'assets/bd/sessao.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +18,7 @@ include_once 'assets/bd/sessao.php';
     <div class="logo">
         <ul class="d-flex  ">
             <li><a href="usuario/index.php" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
-            <li><a href="#"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Fale Conosco</a></li>
+            <li><a href="usuario/FAQ.php"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Fale Conosco</a></li>
             <li><a href="cadastro.php"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Cadastre-se</a></li>
         </ul>
         <div class="img__container">
@@ -51,7 +50,7 @@ include_once 'assets/bd/sessao.php';
                     placeholder="Digite sua senha">
             </div>
 
-            <a href="#" class="text-center link-offset-2">Esqueceu a senha?</a>
+            <a href="resetSenha.php" class="text-center link-offset-2">Esqueceu a senha?</a>
 
             <input type="submit" class="btn btn-outline w-50 m-auto"></input>
         </form>

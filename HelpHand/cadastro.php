@@ -24,10 +24,10 @@
                         $P_senha = $_POST['senha'] ?? NULL;
                         verificarsenha($P_senha, $P_senha_confirmacao);
                     }
-                        if (isset($_SESSION['erro'])) {
-                            echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";   
-                            unset($_SESSION['erro']);                 
-                        }
+                    if (isset($_SESSION['erro'])) {
+                        echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";   
+                        unset($_SESSION['erro']);                 
+                    }
                     ?>
 
                         <label id="label">Nome</label>

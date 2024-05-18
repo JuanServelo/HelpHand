@@ -18,16 +18,8 @@ include_once '../assets/bd/sessao.php';
     <p class="text-center">Aqui você encontrará as respostas para suas possíveis dúvidas sobre o HelpHand.</p>
   </header>
 
-  <main>
-    <div class="d-sm-flex" style="margin-top: 8%">
-      <div class="card shadow mb-5 bg-body-tertiary rounded-4" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
-          <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
-          <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
-          <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
-        </ul>
-      </div>
+<body class="bg-white">
+<?php require '../assets/geral/navbar.php'; ?>
 
       <div class="card shadow mb-5 bg-body-tertiary rounded-4" style="width: 18rem">
         <ul class="list-group list-group-flush">
