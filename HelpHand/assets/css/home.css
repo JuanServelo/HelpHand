@@ -9,259 +9,237 @@
 }
 
 /*     MOBILE     */
-/*HEADER*/
-.navbar {
-    display: flex;
-    align-items: center;
-}
-
-.navbar .logo_maozinha {
-    width: 35%;
-    margin: 5% 0 0% 3%;
-}
-
-.navbar .logo_maozinha:focus, .navbar .menu {
-    outline: none;
-}
-
-.navbar .menu {
-    margin: 6% 5% 0 5%;
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-a:active, a:hover {
-    text-decoration: none;
-}
-
-.navbar .menu span {
-    font-size: 2.5rem;
-}
-
-.search_container {
-    width: 300px;
-    position: relative;
-    display: flex;
-    margin: 5% auto;
-}
-
-.search_container input {
-    width: 300px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-.search_container button {
-    position: absolute;
-    top: 50%;
-    right: 2%;
-    transform: translateY(-43%);
-    width: 50px;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-/*MODAL - HEADER */   
-
-@keyframes topDown {
-    from {
-        transform: translateY(-100%);
+@media (max-width: 999px) {
+/* HEADER */
+    .navbar {
+        display: flex;
+        align-items: center;
     }
-    to {
-        transform: translateY(0);
+    
+    .navbar .logo_maozinha {
+        width: 35%;
+        margin: 5% 0 0% 3%;
     }
-}
-
-.top-down-fade .modal-dialog {
-    animation: topDown 0.5s ease-out;
-}
-
-.modal-content{
-    width: 100%;
-    height: 60vh;
-}
-
-.modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.modal-header h1 {
-    width: 45%;
-    margin: 4%;
-}
-
-.modal-header h1 img {
-    width: 100%;
-}
-
-.modal-header button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 8% 7% 3% 5%;
-    height: 45%;
-}
-
-.modal-header button span {
-    font-size: 2.8rem;
-}
-
-.modal-body ol {
-    margin: 10% 0 0 10%;
-    gap: 20px;
-}
-
-.modal-body ol a {
-    color:black;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.modal-footer .profile_picture {
-    margin-right: 23%;
-    width: 20%;
-}
-
-.modal-footer .profile_picture img{
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 100%;
-    padding: 0 10px 0 10px;
-}
-
-.modal-footer .profile_picture-text h3 {
-    margin-left: 6%;
-    font-size: 1.5rem;
-    color: black;
-}
-
-/*MAIN - TEXTO*/
-
-.texto {
-    margin: 10% 9% 0% 9%;
-    font-weight: 600;
-}
-
-.texto h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-.texto h2 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-.texto h2 .maozinha {
-    width: 14%;
-    margin: 5px 6px 5px 6px;
-    animation: waveImage 2s infinite;
-    transform-origin: bottom right;
-    transition: transform 0.5s ease-in-out;
-}
-
-@keyframes waveImage {
-    0% {
-        transform: rotate(12deg);
+    
+    .navbar .logo_maozinha:focus, .navbar .menu {
+        outline: none;
     }
-    25% {
-        transform: rotate(10deg) translate(-5%, 5%);
+    
+    .navbar .menu {
+        margin: 6% 5% 0 5%;
+        background: none;
+        border: none;
+        padding: 0;
     }
-    50% {
-        transform: rotate(12deg);
+    
+    a:active, a:hover {
+        text-decoration: none;
     }
-    75% {
-        transform: rotate(-10deg) translate(-5%, 5%);
+    
+    .navbar .menu span {
+        font-size: 2.5rem;
     }
-    100% {
-        transform: rotate(12deg);
+    
+    .search_container {
+        width: 300px;
+        position: relative;
+        display: flex;
+        margin: 5% auto;
     }
-}
+    
+    .search_container input {
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    
+    .search_container button {
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-43%);
+        width: 50px;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
 
-/*MODAL - CARROSSEL*/
-.carousel {
-    height: 50vh;
-    background: var(--cor-principal);
-    border-radius: 50px;
-}
+    /*MAIN - TEXTO*/
 
-.carousel-indicators {
-    height: 4%;
-    margin-bottom: 15px;
-    gap: 15px;
-}
+    .texto {
+        margin: 10% 9% 0% 9%;
+        font-weight: 600;
+    }
 
-.carousel-indicators button {
-    width: 6%;
-    height: 90%;
-    border-radius: 100%;
-    border: 0;
-    background-color: white;
-}
+    .texto h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
 
-.carousel-indicators .active {
-    outline: white solid 2px;
-    transform: scale(1.1);
-    background: var(--cor-principal); 
-}
+    .texto h2 {
+        font-size: 2rem;
+        margin: 0;
+    }
 
-.carousel-inner, .carousel-item, .card_container {
-    height: 45vh;
-}
+    .texto h2 .maozinha {
+        width: 14%;
+        margin: 5px 6px 5px 6px;
+        animation: waveImage 2s infinite;
+        transform-origin: bottom right;
+        transition: transform 0.5s ease-in-out;
+    }
 
-.card_content {
-    border: 2px solid white;
-    border-radius: 50px;
-    width: 75%;
-    height: 40vh;
-    padding: 3% 0;
-    margin-top: 5%;
-}
+    /*MODAL - HEADER */   
+    .top-down-fade .modal-dialog {
+        animation: topDown 0.5s ease-out;
+    }
 
-.card_content .card_button {
-    width: 100%;
-    background: none;
-    border: none;
-}
+    .modal-content{
+        width: 100%;
+        height: 60vh;
+    }
 
-.card_content img {
-    margin: 0 auto;
-}
+    .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.card_content h5 {
-    color: white;
-    font-size: 1.5rem;
-}
+    .modal-header h1 {
+        width: 45%;
+        margin: 4%;
+    }
 
-.card_content .button_info {
-    background: white;
-    color: var(--cor-principal);
-    font-weight: 500;
-    font-size: 1.3rem;
-    margin-top: 3%;
-    width: 70%;
-    height: 15%;
-    border: 0;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out; 
-}
+    .modal-header h1 img {
+        width: 100%;
+    }
 
-.card_content .button_info:hover {
-    transform: scale(1.1);
-}
+    .modal-header button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 8% 7% 3% 5%;
+        height: 45%;
+    }
 
-.carousel-control-prev, .carousel-control-next {
-    background: none;
-    border: none;
-}
+    .modal-header button span {
+        font-size: 2.8rem;
+    }
 
-.carousel-control-prev span, .carousel-control-next span {
-    display: none;
+    .modal-body ol {
+        margin: 10% 0 0 10%;
+        gap: 20px;
+    }
+
+    .modal-body ol a {
+        color:black;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .modal-footer .profile_picture {
+        margin-right: 23%;
+        width: 20%;
+    }
+
+    .modal-footer .profile_picture img{
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 100%;
+        padding: 0 10px 0 10px;
+    }
+
+    .modal-footer .profile_picture-text h3 {
+        margin-left: 6%;
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    /*MODAL - CARROSSEL*/
+    .carrossel_desktop {
+        display: none;
+    }
+
+    .carousel {
+        height: 50vh;
+        background: var(--cor-principal);
+        border-radius: 50px;
+    }
+
+    .carousel-indicators {
+        height: 4%;
+        margin-bottom: 15px;
+        gap: 15px;
+    }
+
+    .carousel-indicators button {
+        width: 6%;
+        height: 90%;
+        border-radius: 100%;
+        border: 0;
+        background-color: white;
+    }
+
+    .carousel-indicators .active {
+        outline: white solid 2px;
+        transform: scale(1.1);
+        background: var(--cor-principal); 
+    }
+
+    .carousel-inner, .carousel-item, .card_container {
+        height: 45vh;
+    }
+
+    .card_content {
+        border: 2px solid white;
+        border-radius: 50px;
+        width: 75%;
+        height: 40vh;
+        padding: 3% 0;
+        margin-top: 5%;
+    }
+
+    .card_content .card_button {
+        width: 100%;
+        background: none;
+        border: none;
+    }
+
+    .card_content img {
+        margin: 0 auto;
+    }
+
+    .card_content h5 {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .card_content .button_info {
+        background: white;
+        color: var(--cor-principal);
+        font-weight: 500;
+        font-size: 1.3rem;
+        margin-top: 3%;
+        width: 70%;
+        height: 15%;
+        border: 0;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out; 
+    }
+
+    .card_content .button_info:hover {
+        transform: scale(1.1);
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        background: none;
+        border: none;
+    }
+
+    .carousel-control-prev span, .carousel-control-next span {
+        /*display: none;*/
+    }
 }
 
 /*   DESKTOP   */
@@ -360,6 +338,10 @@ a:active, a:hover {
         margin: 5px 6px 10px 7px;
     }
     /*MAIN - CARROSSEL*/
+    .carrossel_mobile {
+        display: none;
+    }
+    
     .carousel {
         height: 50vh;
     }
@@ -385,5 +367,32 @@ a:active, a:hover {
 
     .botoes-carousel .carousel-control-prev, .botoes-carousel .carousel-control-next {
         width: 6%;
+    }
+}
+
+@keyframes topDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes waveImage {
+    0% {
+        transform: rotate(12deg);
+    }
+    25% {
+        transform: rotate(10deg) translate(-5%, 5%);
+    }
+    50% {
+        transform: rotate(12deg);
+    }
+    75% {
+        transform: rotate(-10deg) translate(-5%, 5%);
+    }
+    100% {
+        transform: rotate(12deg);
     }
 }
