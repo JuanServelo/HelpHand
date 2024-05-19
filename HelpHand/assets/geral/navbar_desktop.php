@@ -1,5 +1,5 @@
 <div class="modal fade" id="modal_logo_maozinha" tabindex="-1" 
-        aria-labelledby="modal_logo_maozinha" aria-hidden="true"> <!--modal do desktop-->
+        aria-labelledby="modal_logo_maozinha" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen m-0">
                 <div class="modal-content">
                     <div class="modal-header p-0">
@@ -21,7 +21,7 @@
                                 <ion-icon name="refresh-outline"></ion-icon>
                                 Histórico
                             </a>
-                            <a href="#">
+                            <a href="FAQ.php">
                                 <ion-icon name="help-circle-outline"></ion-icon>
                                 FAQ
                             </a>
@@ -32,7 +32,10 @@
                             <img src="../assets/img/user 1.png" alt="">
                         </a>
                         <a class="profile_picture-text w-50" href="#">
-                            <h3>Nome do Usuário</h3>
+                            <h3 href="perfil.php"><?php echo $_SESSION['nome'] ?></h3>
+                        </a>
+                        <a class="profile_picture-text w-50" href="../assets/bd/sairusuario.php">
+                            <h3>Logout</h3>
                         </a>
                     </div>
                 </div>
