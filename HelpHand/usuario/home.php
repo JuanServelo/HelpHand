@@ -3,7 +3,7 @@ include_once '../assets/bd/sessao.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,10 +35,14 @@ include_once '../assets/bd/sessao.php';
         </form> 
 
         <!-- modal do mobile -->
-        <?php require '../assets/geral/navbar_mobile.php'; ?>
+        <div class="navbar_mobile">
+            <?php require '../assets/geral/navbar_mobile.php'; ?>
+        </div>
 
         <!-- modal do desktop -->
-        <?php require '../assets/geral/navbar_desktop.php'; ?>
+        <div class="navbar_desktop">
+            <?php require '../assets/geral/navbar_desktop.php'; ?>
+        </div>
     </header>
 
     <main>
