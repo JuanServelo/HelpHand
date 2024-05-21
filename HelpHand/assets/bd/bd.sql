@@ -52,12 +52,15 @@ CREATE TABLE Servico (
     fk_Usuario_ID_Usuario INT,
     fk_Endereco_ID_Endereco INT,
     Data_Servico DATE NOT NULL,
+    Status_Servico ENUM('Analise', 'Finalizado', 'Em progresso', 'Cancelado') NOT NULL,
     Avaliacao INT DEFAULT NULL,
     Valor FLOAT NOT NULL DEFAULT 0.00,
+    Descricao TEXT,
     ID_Servico INT PRIMARY KEY AUTO_INCREMENT
 );
 
 CREATE TABLE Comentario (
+	ID_Comentario INT PRIMARY KEY AUTO_INCREMENT,
     fk_Colaborador_ID_Colaborador INT,
     fk_Usuario_ID_Usuario INT,
     Data_comentario DATE NOT NULL,
@@ -156,7 +159,7 @@ ON Usuario
 FOR EACH ROW
 BEGIN
 INSERT INTO
-UserLog (Operation, ChangeDate, UserName, OldID_User, OldUser, OldCPF, OldData_Nasc, OldGenero, OldNota, OldTelefone, OldEmail, OldSenha, OldFoto. OldTipo)
+UserLog (Operation, ChangeDate, UserName, OldID_User, OldUser, OldCPF, OldData_Nasc, OldGenero, OldNota, OldTelefone, OldEmail, OldSenha, OldFoto, OldTipo)
 SELECT 'Delete', NOW(), CURRENT_USER(), OLD.ID_Usuario, OLD.Nome, OLD.CPF, OLD.Data_Nasc, OLD.Genero, OLD.Nota, OLD.Telefone, OLD.Email, OLD.Senha, OLD.Foto, OLD.Tipo_User;
 END $$
 DELIMITER ;
@@ -174,8 +177,8 @@ SELECT 'Update', NOW(), CURRENT_USER(), OLD.ID_Usuario, NEW.ID_Usuario, OLD.Nome
 END $$
 DELIMITER ;
 
-INSERT Usuario (Nome, CPF, Data_nasc, Email, Senha, Telefone, Genero, Nota, Foto, Tipo_User) VALUES
-('Jorgeaaaaa', '123.456.789-11','2000-04-18', 'jorginho@gmail.com', 'senha','41 98888-8888',  'Masculino', 4, NULL, 'Usuario');
-SELECT * FROM Usuario;
-
+UPDATE usuario SET Tipo_User = 'Administrador' WHERE Email = 'Admin@HelpHand.com';
+DELETE FROM Usuario WHERE ID_Usuario = 4;
+SELECT * FROM UserLog;
+UPDATE usuario SET Senha = '$senhaCriptografada' WHERE Email = 'Admin@HelpHand.com';
 COMMIT;

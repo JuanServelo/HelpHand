@@ -17,7 +17,7 @@ include_once 'assets/bd/sessao.php';
 <body class="container-fluid d-flex p-0 m-0 min-vh-100">
     <div class="logo">
         <ul class="d-flex  ">
-            <li><a href="usuario/index.php" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
+            <li><a href="usuario/home.php" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
             <li><a href="usuario/FAQ.php"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Fale Conosco</a></li>
             <li><a href="cadastro.php"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Cadastre-se</a></li>
         </ul>

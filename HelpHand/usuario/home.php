@@ -7,6 +7,7 @@ include_once '../assets/bd/sessao.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Home</title>
@@ -33,16 +34,9 @@ include_once '../assets/bd/sessao.php';
                 <span style="font-size: 1.5rem;"><ion-icon name="search-outline"></ion-icon></span> 
             </button>
         </form> 
-
-        <!-- modal do mobile -->
-        <div class="navbar_mobile">
-            <?php require '../assets/geral/navbar_mobile.php'; ?>
-        </div>
-
-        <!-- modal do desktop -->
-        <div class="navbar_desktop">
-            <?php require '../assets/geral/navbar_desktop.php'; ?>
-        </div>
+        <?php require '../assets/geral/menu.php'; ?>
+        <?php require '../assets/geral/navbar_mobile.php'; ?>
+        <?php require '../assets/geral/navbar_desktop.php'; ?>
     </header>
 
     <main>
@@ -53,7 +47,7 @@ include_once '../assets/bd/sessao.php';
         </div>
 
         <div class="container pt-5">
-            <div class="carousel slide" id="ads"> <!--data-bs-ride="carousel" para rolagem automática-->
+            <div class="carousel slide" id="ads">
 
                 <div class="carousel-indicators">
                     <button type="button" aria-current="true" data-bs-target="#ads" data-bs-slide-to="0" class="active"></button>
@@ -142,6 +136,8 @@ include_once '../assets/bd/sessao.php';
             </div>
         </div>
     </main>    
+    
+    <?php require '../assets/geral/rodape.php'; ?>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

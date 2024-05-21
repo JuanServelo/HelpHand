@@ -33,7 +33,7 @@
                             <img src="../assets/img/user 1.png" alt="">
                         </a>
                         <a class="profile_picture-text w-75" href="#">
-                            <h3>Nome do Usuário</h3>
+                            <h3><?php echo $_SESSION['nome'] ?></h3>
                         </a>
                     </div>
 

@@ -18,7 +18,7 @@
                     placeholder="Digite sua senha">
             </div>
             <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-            <a href="#" class="text-center link-offset-2">Esqueceu a senha?</a>
+            <a href="../resetSenha.php" class="text-center link-offset-2">Esqueceu a senha?</a>
             <a href="../cadastro.php" class="text-center link-offset-2">Cadastre-se</a>
         </form>
     </div>

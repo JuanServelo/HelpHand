@@ -47,8 +47,9 @@
             <input type="password" id="senha_confirmacao" name="senha_confirmacao" 
             required class="form-control mb-3" placeholder="Confirme sua senha" title="Confirme sua senha">
         </div>
-
         <input type="submit" value="Confirmar" id="botao">
+        <a href="../login.php" class="text-center link-offset-2">Logar</a>
+        <a href="../cadastro.php" class="text-center link-offset-2">Cadastre-se</a>
     </form>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
