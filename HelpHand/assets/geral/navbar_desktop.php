@@ -9,22 +9,22 @@
                     <span><ion-icon name="close-circle-outline"></ion-icon></span>
                 </button>
             </div>
-                <div class="modal-body p-0">
-                    <ol class="d-flex flex-column p-0">
-                        <a href="#">
-                            <ion-icon name="settings-outline"></ion-icon>
-                                Serviços
-                        </a>
-                        <a href="#">
-                            <ion-icon name="refresh-outline"></ion-icon>
-                                Histórico
-                        </a>
-                        <a href="FAQ.php">
-                            <ion-icon name="help-circle-outline"></ion-icon>
-                                FAQ
-                        </a>
-                    </ol>
-                </div>     
+            <div class="modal-body p-0">
+                <ol class="d-flex flex-column p-0">
+                    <a href="#">
+                        <ion-icon name="settings-outline"></ion-icon>
+                            Serviços
+                    </a>
+                    <a href="#">
+                        <ion-icon name="refresh-outline"></ion-icon>
+                            Histórico
+                    </a>
+                    <a href="FAQ.php">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                            FAQ
+                    </a>
+                </ol>
+            </div>     
             <div class="modal-footer d-flex justify-content-start m-3">
                 <a href="#" class="profile_picture d-flex justify-content-center align-items-center">
                     <img src="../assets/img/user 1.png" alt="">
