@@ -1,6 +1,7 @@
 <?php
 include_once '../assets/bd/sessao.php';
 ?>
+
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -12,42 +13,45 @@ include_once '../assets/bd/sessao.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
   <link rel="stylesheet" href="../assets/css/FAQ.css">
 </head>
-<body >
-  <header class="d-md-flex flex-column justify-content-center align-items-center p-5 text-white">
+
+<body>
+  <header class="d-md-flex flex-column p-4 text-white">
+    <div class="maozinha" style="width:10%">
+      <button class="logo_maozinha navbar-toggler p-0" type="button" 
+        data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
+            <img src="../assets/img/logo_branca.png" 
+            class="img-fluid float-start rounded d-block" width="100%" alt="">
+      </button>
+    </div>
+    <?php require '../assets/geral/navbar_desktop.php'; ?>
     <h1 class="text-center m-3">Perguntas Frequentes</h1>
     <p class="text-center">Aqui você encontrará as respostas para suas possíveis dúvidas sobre o HelpHand.</p>
   </header>
 
-<body class="bg-white">
-<?php require '../assets/geral/navbar.php'; ?>
-
-      <div class="card shadow mb-5 bg-body-tertiary rounded-4" style="width: 18rem">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
-          <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
-          <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
-          <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
-        </ul>
-      </div>
-    </div>
+  <main class="card shadow bg-body-tertiary rounded-4" style="width: 18rem">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
+      <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
+      <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
+      <li class="list-group-item" style="height: 8vh"><a class="d-flex align-items-center justify-content-start" href="#">lorem</a></li>
+    </ul>
   </main>
 
-  
   <footer class="d-sm-flex flex-row justify-content-between align-items-center py-3 my-4 border-top">
 
-    <div class="send_aks d-flex justify-content-start" style="padding-left: 2%; width: 45%">
+    <div class="send_aks d-flex justify-content-start" style="padding-left: 2%; width: 30%">
       <p>
         <span class="fs-5"><ion-icon name="help-circle-outline"></ion-icon></span> 
-        Continua com dúvidas? Envie sua pergunta para o 
+        Continua com dúvidas? <br> Envie sua pergunta para o 
         <a href="#">central de ajuda.</a> 
       </p>
     </div> 
 
-    <div class="copyright d-flex justify-content-center align-items-center" style="width: 30%">
+    <div class="copyright d-flex justify-content-center align-items-center" style="width: 40%">
       <span class="mb-3 mb-md-0 text-muted">© 2024 Copyright: HelpHand</span>
     </div>
 
-    <div class="social_media container justify-content-end list-unstyled d-flex w-50" style="padding-right: 3%">
+    <div class="social_media container justify-content-end list-unstyled d-flex" style="padding-right: 3%; width: 30%">
       <section class="mb-4">
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" style="background-color: #b3dad4 ; border-radius:50%;" role="button"><i
           class="fab fa-facebook-f"></i></a>
@@ -69,6 +73,7 @@ include_once '../assets/bd/sessao.php';
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
