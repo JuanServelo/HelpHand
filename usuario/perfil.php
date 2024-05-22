@@ -85,29 +85,17 @@ $conn->close();
                         <div class="form-group">
                             <label for="senha" class="form-label">Senha:</label>
                             <input type="password" class="form-control" id="senha" name="senha" required>
-                        </div>
-                        <!-- CEP -->
-                        <div class="form-group">
-                            <label for="cep" class="form-label">CEP:</label>
-                            <input type="text" class="form-control" id="cep" name="cep" value="<?php echo htmlspecialchars($user['CEP']); ?>" required>
-                        </div>
+                        </div>                       
                         <!-- Endereço -->
                         <div class="form-group">
                             <label for="endereco" class="form-label">Endereço:</label>
                             <input type="text" class="form-control" id="endereco" name="endereco" value="<?php echo htmlspecialchars($user['Endereco']); ?>" required>
                         </div>
-                        <!-- Funções -->
-                        <div class="form-group">
-                            <label for="funcoes" class="form-label">Funções:</label>
-                            <input type="text" class="form-control" id="funcoes" name="funcoes" value="<?php echo htmlspecialchars($user['Funcoes']); ?>" required>
-                        </div>
                         <button type="submit" class="btn btn-primary" name="salvar">Salvar</button>
                     </form>
                 </div>
                 <!-- Fim do Formulário -->
-                
-                
-                
+                  
             </div>
         </section>
     </div>
