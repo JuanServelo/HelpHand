@@ -1,17 +1,12 @@
 <?php
 include_once '../assets/bd/sessao.php';
-$_SESSION['1']; // Definindo o ID do usuário para testes
-
-// Conexão com o banco de dados
+$email = $_SESSION['email']; // Definindo o ID do usuário para testes
 
 
-// Supondo que você tenha o ID do usuário na sessão
-$userId = $_SESSION['user_id'];
-
-$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Colaborador WHERE ID_Colaborador = ?";
+$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Usuario WHERE Email = ?";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $userId);
+$stmt->bind_param("i", $email);
 $stmt->execute();
 $result = $stmt->get_result();
 
