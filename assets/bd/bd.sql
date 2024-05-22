@@ -36,7 +36,6 @@ CREATE TABLE Usuario (
     Email VARCHAR(100) NOT NULL,
     Senha VARCHAR(100) NOT NULL,
     CPF VARCHAR(14) NOT NULL,
-    CEP VARCHAR(100) NOT NULL,
     Nota INT DEFAULT 5 NOT NULL,
     Foto MEDIUMBLOB DEFAULT NULL,
     Tipo_User ENUM('Usuario', 'Administrador') DEFAULT 'Usuario' NOT NULL,
