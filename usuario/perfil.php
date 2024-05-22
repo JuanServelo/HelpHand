@@ -1,19 +1,15 @@
 <?php
 include_once '../assets/bd/sessao.php';
-$_SESSION['user_id']; // Definindo o ID do usuário para testes
-
-// Conexão com o banco de dados
+$email = $_SESSION['email'];
 
 
-// Supondo que você tenha o ID do usuário na sessão
-$userId = $_SESSION['user_id'];
-
-$sql = "SELECT Nome, Telefone, Email, CPF, Foto, CEP, Endereco, Funcoes FROM Usuario WHERE ID_Usuario = ?";
+$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Colaborador WHERE Email = ?";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $userId);
+$stmt->bind_param("i", $email);
 $stmt->execute();
 $result = $stmt->get_result();
+
 
 if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();

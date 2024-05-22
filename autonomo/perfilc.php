@@ -3,7 +3,7 @@ include_once '../assets/bd/sessao.php';
 $email = $_SESSION['email']; // Definindo o ID do usuário para testes
 
 
-$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Usuario WHERE Email = ?";
+$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Colaborador WHERE Email = ?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $email);
