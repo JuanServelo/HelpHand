@@ -14,9 +14,10 @@
 </head>
 <?php
 include_once '../assets/bd/sessao.php';
-
 $Email = $_SESSION['email'];
-$Email1 = $_Post['email'];
+$Email1 = $_POST['Email'];
+
+
 $sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero, ID_Usuario FROM Usuario WHERE Email = '$Email'";
 $sql1 = "SELECT Nome, Telefone, Email, CPF, Foto, Genero, ID_Colaborador FROM Colaborador WHERE Email = '$Email1'";
 
@@ -58,7 +59,6 @@ echo "id".$ID_Colaborador;
 
         <input type="submit" value="Cadastrar Serviço" id="botao">
     </form>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
