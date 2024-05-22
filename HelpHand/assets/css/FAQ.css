@@ -15,7 +15,7 @@ header {
 }
 
 .card {
-    margin: 20px auto;
+    margin: 3% auto;
 }
 
 a {
@@ -30,10 +30,19 @@ a:hover {
 
 footer {
     margin-bottom: 0;
-    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
     font-size: 1rem;
 }
 
+@media (min-width: 999px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}

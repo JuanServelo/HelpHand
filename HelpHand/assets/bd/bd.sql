@@ -30,7 +30,7 @@ CREATE TABLE Colaborador (
 CREATE TABLE Usuario (
     Nome VARCHAR(100) NOT NULL,
     Telefone VARCHAR(18) NOT NULL,
-    Genero ENUM('Masculino', 'Feminino', 'Outro') NOT NULL,
+    Genero ENUM('Masculino', 'Feminino', 'Outros') NOT NULL,
     Data_nasc DATE NOT NULL,
     ID_Usuario INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Email VARCHAR(100) NOT NULL,
