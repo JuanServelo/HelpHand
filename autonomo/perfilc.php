@@ -1,10 +1,14 @@
 <?php
 include_once '../assets/bd/sessao.php';
+$_SESSION['1']; // Definindo o ID do usuário para testes
 
 // Conexão com o banco de dados
+
+
 // Supondo que você tenha o ID do usuário na sessão
-$Email = $_SESSION['email'];
-$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Colaborador WHERE Email =" . $Email;
+$userId = $_SESSION['user_id'];
+
+$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Colaborador WHERE ID_Colaborador = ?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $userId);

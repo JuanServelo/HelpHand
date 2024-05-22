@@ -7,7 +7,7 @@ function verificarUsuario($P_email, $P_senha, $P_senha_confirmacao)
 {
     $servername = "localhost:3306";
     $username = "root";
-    $password = "";
+    $password = "PUC@1234";
     $database = "HelpHand";
 
     $conn = new mysqli($servername, $username, $password, $database);

@@ -1,7 +1,11 @@
 <?php
 // Conectar ao banco de dados
-include '../assets/bd/conectar.php';
+include 'db_connect.php';
 
+// Verificar a conexão
+if ($conn->connect_error) {
+    die("Erro na conexão: " . $conn->connect_error);
+}
 
 // Verificar se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
