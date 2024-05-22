@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* GERAL */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+/* Estilo do rótulo do formulário */
+label.form-label {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block;
+    margin-top: 10px;
+    border-radius: 30px;
+}
+
+/* Espaçamento entre os elementos do formulário */
+.form-group {
+    margin-bottom: 10px;
+}
+
+/* Estilo dos campos de entrada do formulário */
+.form-control {
+    border-radius: 30px;
+    padding: 5px;
+    border-color: gray;
+}
+
+/* Estilo do container do formulário */
+.form-container {
+    width: 55%; /* Alterado para largura percentual para melhor adaptabilidade */
+    
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 30px; /* Adiciona um espaçamento interno */
+    border-radius: 30px; /* Adiciona bordas arredondadas */
+    background-color: white; /* Cor de fundo */
+    height: 20vh; /* Altura automática para ajustar ao conteúdo */
+    position: relative;
+    left: 30vh;
+    top: -60vh;
+}
+
+.linha-vertical {
+    width: 2px; /* Largura da linha */
+    height: 70vh; /* Altura da linha */
+    background-color: gray; /* Cor da linha */
+    color: gray;
+    font-weight: 300;
+}
+
+/* Estilo para o título do formulário */
+.form-container h1 {
+    margin-bottom: 20px; /* Espaçamento inferior para separar do formulário */
+}
+
+/* Estilo para o botão de envio */
+.form-container button {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto branca */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Estilo para o botão de envio ao passar o mouse */
+.form-container button:hover {
+    background-color: #0056b3; /* Cor de fundo azul mais escura */
+}
+
+/* Estilo para o link de sair */
+.form-container a {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: #007bff; /* Cor do link azul */
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Estilo para o link de sair ao passar o mouse */
+.form-container a:hover {
+    color: #0056b3; /* Cor do link azul mais escura */
+}
+
+
+.nome {
+    left: 55px;
+    top: -600px;
+    font-weight: 700; /* Define o peso da fonte como negrito */
+    font-size: 34px;  /* Tamanho da fonte */
+    color: #333;      /* Cor da fonte */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra no texto para dar mais destaque */
+}
+
+.foto{
+    left: 55px; /* Alterado para 'px' */
+    top: -720px; /* Alterado para 'px' */
+}
+
+.email{
+    left: 40px; /* Alterado para 'px' */
+    top: -655px; /* Alterado para 'px' */
+    font-size: 20px;
+}
+
+.telefone{
+    left: 76px; /* Alterado para 'px' */
+    top: -590px; /* Alterado para 'px' */
+}
+
+
+
