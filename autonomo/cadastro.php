@@ -16,8 +16,7 @@
                     <h1 class="titulo_cad">Cadastre-se</h1>
                     <form method="post" class="form_cadastro">
                         
-                    <?php
-                    include_once '../assets/bd/Cadastrar.php';
+                    <?php include_once '../assets/bd/Cadastrar_colaborador.php';
                     
                     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $P_senha_confirmacao = $_POST['senha_confirmacao'] ?? NULL;
@@ -55,7 +54,7 @@
                                     <option value="" disabled selected>Selecione seu gênero</option>
                                     <option value="Masculino">Masculino</option>
                                     <option value="Feminino">Feminino</option>
-                                    <option value="Outros">Outros</option>
+                                    <option value="Outro">Outros</option>
                                 </select>
                             </div>
                         </div>
@@ -70,9 +69,10 @@
 
             <div class="col-lg-6 header">
                 <div class="conj_text">
-                    <a href="usuario/index.php" class="text">Home</a>
+                    <a href="../usuario/home.php" class="text">Home</a>
+                    <a href="../cadastro.php" class="text">Cadastrar</a>
                     <a href="#" class="text">Fale Conosco</a>
-                    <a href="./login.php" class="text">Entrar</a>
+                    <a href="../login.php" class="text">Entrar</a>
                 </div>
                 <div class="div_image">
                     <img class="w-100" src="../assets/img/logo_branca.png">

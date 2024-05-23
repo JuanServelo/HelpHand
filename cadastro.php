@@ -71,6 +71,7 @@
             <div class="col-lg-6 header">
                 <div class="conj_text">
                     <a href="usuario/index.php" class="text">Home</a>
+                    <a href="./autonomo./cadastro.php" class="text">Seja um colaborador</a>
                     <a href="#" class="text">Fale Conosco</a>
                     <a href="./login.php" class="text">Entrar</a>
                 </div>
