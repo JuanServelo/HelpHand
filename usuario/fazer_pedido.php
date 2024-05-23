@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-br">
 
@@ -37,7 +36,7 @@ echo "id".$ID_Colaborador;
 <?php require '../assets/geral/navbar.php';?>
 <?php require '../assets/geral/menu.php'; ?>
 
-    <form action="inserir_servico.php" method="POST" class="form_cadastro" >
+    <form action="home.php" method="POST" class="form_cadastro" >
 
         <input id="nome" type="hidden" name="fk_Usuario_ID_Usuario" value="<?php echo $ID_Colaborador;; ?>" required>
 
@@ -59,6 +58,28 @@ echo "id".$ID_Colaborador;
 
         <input type="submit" value="Cadastrar Serviço" id="botao">
     </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $fk_Colaborador_ID_Colaborador = $ID_Colaborador;
+      $fk_Usuario_ID_Usuario = $ID_Usuario;
+      $fk_Endereco_ID_Endereco = $ID_Endereco;
+      $Data_Servico = $_POST['Data_Servico'] ?? '';
+      $Status_Servico = 'Analise'; // Set the initial status as 'Analise'
+      $Avaliacao = $_POST['Avaliacao'] ?? '';
+      $Valor = $_POST['Valor'] ?? '';
+      $Descricao = $_POST['Descricao'] ?? '';
+
+      // Insert the data into the Servico table
+      $sql = "INSERT INTO Servico (fk_Colaborador_ID_Colaborador, fk_Usuario_ID_Usuario, fk_Endereco_ID_Endereco, Data_Servico, Status_Servico, Avaliacao, Valor, Descricao) 
+          VALUES ('$fk_Colaborador_ID_Colaborador', '$fk_Usuario_ID_Usuario', '$fk_Endereco_ID_Endereco', '$Data_Servico', '$Status_Servico', '$Avaliacao', '$Valor', '$Descricao')";
+
+      if (mysqli_query($conn, $sql)) {
+        echo "Serviço cadastrado com sucesso!";
+      } else {
+        echo "Erro ao cadastrar o serviço: " . mysqli_error($conn);
+      }
+    }
+    ?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
