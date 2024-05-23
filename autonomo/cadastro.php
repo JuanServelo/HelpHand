@@ -46,7 +46,7 @@
                         <div class="label_container">
                             <div class="inputs selecao">
                                 <label id="label">Data De Nascimento</label>
-                                <input type="date" id="data_nascimento" name="data_nascimento" required class="form-control mb-3" placeholder="Digite sua data de nascimento">
+                                <input type="date" id="data_nascimento" name="data_nascimento" required class="form-control mb-3" placeholder="Digite sua data de nascimento" max="<?php echo date('Y-m-d', strtotime('-18 years')); ?>">
                             </div>
                             <div class="inputs segundo selecao">
                                 <label id="label">Gênero</label>

@@ -4,9 +4,9 @@ session_start();
 require 'conectar.php';
 
 function verificarsenha($P_senha, $P_senha_confirmacao) {
-    $servername = "localhost:3307";
+    $servername = "localhost:3306";
     $username = "root";
-    $password = "";
+    $password = "PUC@1234";
     $database = "HelpHand";
 
     $conn = new mysqli($servername, $username, $password, $database);
@@ -27,7 +27,7 @@ function verificarsenha($P_senha, $P_senha_confirmacao) {
         $sql_verificar_email = "SELECT * FROM Colaborador WHERE Email = '$email'";
         $resultado = $conn->query($sql_verificar_email);
         $sql_verificar_email_usuario = "SELECT * FROM Usuario WHERE Email = '$email'";
-        $resultado_usuario = $conn->query($sql_verificar_email);
+        $resultado_usuario = $conn->query($sql_verificar_email_usuario);
 
         if ($resultado->num_rows > 0) {
             $_SESSION['erro'] = "Este email já está cadastrado!";

@@ -32,7 +32,10 @@
                             <img src="../assets/img/user 1.png" alt="">
                         </a>
                         <a class="profile_picture-text w-50" href="#">
-                            <h3>Nome do Usuário</h3>
+                            <h3 href="perfil.php"><?php echo $_SESSION['nome'] ?></h3>
+                        </a>
+                        <a class="profile_picture-text w-50" href="../assets/bd/sairusuario.php">
+                            <h3>Logout</h3>
                         </a>
                     </div>
                 </div>

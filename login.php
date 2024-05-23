@@ -20,6 +20,7 @@ include_once 'assets/bd/sessao.php';
             <li><a href="usuario/home.php" class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Home</a></li>
             <li><a href="usuario/FAQ.php"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Fale Conosco</a></li>
             <li><a href="cadastro.php"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Cadastre-se</a></li>
+            <li><a href="./autonomo./cadastro.php"class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Seja um colaborador</a></li>
         </ul>
         <div class="img__container">
             <a href="#">
