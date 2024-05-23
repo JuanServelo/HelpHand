@@ -4,11 +4,6 @@
     <div class="login-container">
         <h2 class="text-center mb-4">Logue para continuar</h2>
         <form action="" method="POST" class="d-flex flex-column" style="gap: 15px">
-            <?php
-            if (isset($_SESSION['erro'])) {
-                echo "<div class='alert alert-danger' role='alert'>$_SESSION[erro]</div>";
-                unset($_SESSION['erro']);
-            } ?>
             <div class="form-group">
                 <input type="email" class="form-control" name="email" required class="seletor_text"
                     placeholder="Digite seu email">
