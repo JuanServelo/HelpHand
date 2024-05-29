@@ -14,11 +14,11 @@
 <?php
 include_once '../assets/bd/sessao.php';
 $Email = $_SESSION['email'];
-$Email1 = $_POST['Email'];
+$Email1 = $_POST['Email'] ?? '';
 
 
-$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero, ID_Usuario FROM Usuario WHERE Email = '$Email'";
-$sql1 = "SELECT Nome, Telefone, Email, CPF, Foto, Genero, ID_Colaborador FROM Colaborador WHERE Email = '$Email1'";
+$sql = "SELECT * FROM Usuario WHERE Email = '$Email'";
+$sql1 = "SELECT * FROM Colaborador WHERE Email = '$Email1'";
 
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
@@ -38,48 +38,32 @@ echo "id".$ID_Colaborador;
 
     <form action="home.php" method="POST" class="form_cadastro" >
 
-        <input id="nome" type="hidden" name="fk_Usuario_ID_Usuario" value="<?php echo $ID_Colaborador;; ?>" required>
-
-        <input id="nome" type="hidden" name="fk_Usuario_ID_Usuario" value="<?php echo $ID_Usuario; ?>" required>
-
-        <input id="nome" type="hidden" name="fk_Endereco_ID_Endereco" value="<?php echo $ID_Endereco; ?>" required>
+      <?php
+      include_once '../assets/bd/Cadastrar_Pedido.php';
+      if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Data_Servico']) && isset($_POST['Valor'])) {
+        if (!empty($_POST['Data_Servico']) && !empty($_POST['Valor'])) {
+            cadastrar($ID_Colaborador, $ID_Usuario, $ID_Endereco);
+        } else {
+            echo "Por favor, preencha todos os campos obrigatórios.";
+        }
+      }
+      ?>
 
         <label id="label" for="Data_Servico">Data do Serviço:</label>
-        <input id="data_nascimento" type="date" name="Data_Servico" id="Data_Servico" required><br>
+        <input id="Data_Servico" type="date" name="Data_Servico" id="Data_Servico" required><br>
 
         <label id="label" for="Avaliacao">Avaliação:</label>
-        <input id="nome" type="number" name="Avaliacao" id="Avaliacao"><br>
+        <input id="Avaliacao" type="number" name="Avaliacao" id="Avaliacao"><br>
 
         <label id="label" for="Valor">Valor:</label>
-        <input id="nome" type="number" step="0.01" name="Valor" id="Valor" required><br>
+        <input id="Valor" type="number" step="0.01" name="Valor" id="Valor" required><br>
 
         <label id="label" for="Descricao">Descrição:</label>
         <textarea name="Descricao" id="Descricao"></textarea><br>
 
         <input type="submit" value="Cadastrar Serviço" id="botao">
     </form>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $fk_Colaborador_ID_Colaborador = $ID_Colaborador;
-      $fk_Usuario_ID_Usuario = $ID_Usuario;
-      $fk_Endereco_ID_Endereco = $ID_Endereco;
-      $Data_Servico = $_POST['Data_Servico'] ?? '';
-      $Status_Servico = 'Analise'; // Set the initial status as 'Analise'
-      $Avaliacao = $_POST['Avaliacao'] ?? '';
-      $Valor = $_POST['Valor'] ?? '';
-      $Descricao = $_POST['Descricao'] ?? '';
-
-      // Insert the data into the Servico table
-      $sql = "INSERT INTO Servico (fk_Colaborador_ID_Colaborador, fk_Usuario_ID_Usuario, fk_Endereco_ID_Endereco, Data_Servico, Status_Servico, Avaliacao, Valor, Descricao) 
-          VALUES ('$fk_Colaborador_ID_Colaborador', '$fk_Usuario_ID_Usuario', '$fk_Endereco_ID_Endereco', '$Data_Servico', '$Status_Servico', '$Avaliacao', '$Valor', '$Descricao')";
-
-      if (mysqli_query($conn, $sql)) {
-        echo "Serviço cadastrado com sucesso!";
-      } else {
-        echo "Erro ao cadastrar o serviço: " . mysqli_error($conn);
-      }
-    }
-    ?>
+    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>

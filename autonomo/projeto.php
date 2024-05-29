@@ -41,6 +41,7 @@ $result = mysqli_query($conn, $sql);
                     echo "            <a>" . $row['Avaliacao'] . " ★</a>";
                     echo "            <div class='ml-3'>";
                     echo "            <h4 class='NOME'>" . $row['Nome'] . "</h4>";
+                    echo "            <h4 class='tempo_servico'>" . $row['tempo_servico'] . "</h4>";
                     echo "            <a>" . $row['Descricao'] . "</a><br>";
                     echo "            <a>Total: " . $row['Valor'] . "</a>";
                     Echo "</div>";

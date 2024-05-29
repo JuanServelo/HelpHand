@@ -66,6 +66,7 @@ include_once '../assets/bd/sessao.php';
                 echo "            <h4 class='NOME'>" . $row['Nome'] . "</h4>";
                 echo "            <a>" . $row['Descricao'] . "</a><br>";
                 echo "            <a>Total: " . $row['Valor'] . "</a>";
+                echo "            <a>Tempo Serviço: " . $row['tempo_servico'] . "</a>";
                 echo "        </div>";
                 echo "        <form method='post' action='detalhes_servico.php'>";
                 echo "            <input type='hidden' name='ID_Servico' value='" . $row['ID_Servico'] . "'>";

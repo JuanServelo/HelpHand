@@ -3,7 +3,7 @@ include_once '../assets/bd/sessao.php';
 $email = $_SESSION['email'];
 
 
-$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Usuario WHERE Email = ?";
+$sql = "SELECT Nome, Telefone, Email, CPF, teste, Foto, Genero FROM Usuario WHERE Email = ?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $email);
@@ -35,8 +35,9 @@ $conn->close();
 <body>
     <div class="container">
         <!-- Navbar -->
-        <?php require_once '../assets/geral/menu.php'; ?>
-        <?php require_once '../assets/geral/navbarAdmin.php'; ?>
+        <?php require '../assets/geral/menu.php'; ?>
+        <?php require '../assets/geral/navbar_mobile.php'; ?>
+        <?php require '../assets/geral/navbar_desktop.php'; ?>
         <!-- Navbar -->
 
         <!-- Formulários -->
@@ -59,6 +60,7 @@ $conn->close();
                         <h2 class="nome"><?php echo htmlspecialchars($user['Nome']); ?></h2>
                         <p class="telefone"><?php echo htmlspecialchars($user['Telefone']); ?></p>
                         <h2 class="email"><?php echo htmlspecialchars($user['Email']); ?></h2>
+                        <h2 class="cpf"><?php echo htmlspecialchars($user['teste']); ?></h2>
                         <h2 class="cpf"><?php echo htmlspecialchars($user['CPF']); ?></h2>
                     </div>
                 </div>

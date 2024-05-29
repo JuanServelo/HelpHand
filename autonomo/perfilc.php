@@ -5,7 +5,7 @@ include_once '../assets/bd/sessao.php';
 $email = $_SESSION['email'] ?? NULL;
 
 
-$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Colaborador WHERE Email = ?";
+$sql = "SELECT Nome, Telefone, Email, CPF, teste, Foto, Genero FROM Colaborador WHERE Email = ?";
 
 // Preparar a instrução SQL
 $stmt = $conn->prepare($sql);
@@ -63,6 +63,7 @@ $conn->close();
                             <h2 class="nome"><?php echo htmlspecialchars($user['Nome']); ?></h2>
                             <p class="telefone"><?php echo htmlspecialchars($user['Telefone']); ?></p>
                             <h2 class="email"><?php echo htmlspecialchars($user['Email']); ?></h2>
+                            <h2 class="cpf"><?php echo htmlspecialchars($user['teste']); ?></h2>
                             <h2 class="cpf"><?php echo htmlspecialchars($user['CPF']); ?></h2>
                         </div>
                     <?php else: ?>

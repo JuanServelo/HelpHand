@@ -31,7 +31,7 @@
               <strong style="color: black;"><?php echo $_SESSION['nome'] ?></strong>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-              <li><a class="dropdown-item" href="#">Conta</a></li>
+              <li><a class="dropdown-item" href="perfilc.php">Conta</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="../assets/bd/sairusuario.php">Logout</a></li>
             </ul>
