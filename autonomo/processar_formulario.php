@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Recebe os dados do formulário
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $senha = $_POST['senha']; // Lembre-se de criptografar a senha antes de salvar no banco de dados
+        $senha = $_POST['senha'];
         $cep = $_POST['cep'];
         $endereco = $_POST['endereco'];
         $funcoes = $_POST['funcoes'];

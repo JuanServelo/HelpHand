@@ -17,6 +17,7 @@ CREATE TABLE Colaborador (
     CPF VARCHAR(15) NOT NULL,
     ID_Colaborador INT PRIMARY KEY AUTO_INCREMENT,
     Nome VARCHAR(100) NOT NULL,
+    teste VARCHAR(100),
     Foto MEDIUMBLOB DEFAULT NULL,
     Email VARCHAR(100) NOT NULL,
     Senha VARCHAR(100) NOT NULL,
@@ -36,6 +37,7 @@ CREATE TABLE Usuario (
     Email VARCHAR(100) NOT NULL,
     Senha VARCHAR(100) NOT NULL,
     CPF VARCHAR(14) NOT NULL,
+    teste VARCHAR(100),
     Nota INT DEFAULT 5 NOT NULL,
     Foto MEDIUMBLOB DEFAULT NULL,
     Tipo_User ENUM('Usuario', 'Administrador') DEFAULT 'Usuario' NOT NULL,
@@ -177,6 +179,9 @@ SELECT 'Update', NOW(), CURRENT_USER(), OLD.ID_Usuario, NEW.ID_Usuario, OLD.Nome
 END $$
 DELIMITER ;
 
+INSERT INTO Endereco (Endereco, Cidade, Estado, CEP) VALUES ('teste','teste','teste','teste');
+select * from Servico;
+select * from Endereco;
 UPDATE usuario SET Tipo_User = 'Administrador' WHERE Email = 'Admin@HelpHand.com';
 DELETE FROM Usuario WHERE ID_Usuario = 4;
 SELECT * FROM UserLog;

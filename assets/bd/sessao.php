@@ -52,10 +52,10 @@
                         }
                         else{
                             if (mysqli_num_rows($result) == 0) { 
-                            $_SESSION['erro'] = "E-mail não encontrado!"; 
-                            echo "<div class='alert alert-danger' role='alert' style='position: fixed; top: 0; left: 0; width: 100%;'>$_SESSION[erro]</div>";
-                            unset($_SESSION['erro']); 
-                            return;
+                                $_SESSION['erro'] = "E-mail não encontrado!"; 
+                                echo "<div class='alert alert-danger' role='alert' style='position: fixed; top: 0; left: 0; width: 100%;'>$_SESSION[erro]</div>";
+                                unset($_SESSION['erro']); 
+                                return;
                             }
                             $row = mysqli_fetch_row($result);
                             $senha_do_bd = $row[0];

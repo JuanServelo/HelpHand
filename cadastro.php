@@ -33,7 +33,9 @@
                         <label id="label">Nome</label>
                         <input type="text" id="nome" name="nome" required class="form-control mb-3" placeholder="Digite seu nome de usuário">
                         <label id="label">Email</label>
-                        <input type="text" id="Email" name="Email" required class="form-control mb-3" placeholder="Digite seu Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Digite um endereço de email válido">
+                        <input type="email" id="Email" name="Email" required class="form-control mb-3" placeholder="Digite seu Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Digite um endereço de email válido">
+                        <label id="label">Teste</label>
+                        <input type="text" id="teste" name="teste" required class="form-control mb-3" placeholder="Digite seu teste" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Digite um endereço de teste válido">
                         <div class="label_container">
                             <div class="inputs">
                                 <label id="label">Telefone</label>
@@ -47,7 +49,7 @@
                         <div class="label_container">
                             <div class="inputs selecao">
                                 <label id="label">Data De Nascimento</label>
-                                <input type="date" id="data_nascimento" name="data_nascimento" required class="form-control mb-3" placeholder="Digite sua data de nascimento">
+                                <input type="date" id="data_nascimento" name="data_nascimento" required class="form-control mb-3" placeholder="Digite sua data de nascimento" max="<?php echo date('Y-m-d', strtotime('-18 years')); ?>">
                             </div>
                             <div class="inputs segundo selecao">
                                 <label id="label">Gênero</label>
@@ -70,7 +72,7 @@
 
             <div class="col-lg-6 header">
                 <div class="conj_text">
-                    <a href="usuario/index.php" class="text">Home</a>
+                    <a href="usuario/home.php" class="text">Home</a>
                     <a href="./autonomo./cadastro.php" class="text">Seja um colaborador</a>
                     <a href="#" class="text">Fale Conosco</a>
                     <a href="./login.php" class="text">Entrar</a>

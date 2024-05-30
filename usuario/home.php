@@ -27,13 +27,12 @@ include_once '../assets/bd/sessao.php';
             </button>
         </nav>
 
-        <form class="search_container" role="search">
-            <input class="form-control me-2" type="search" 
-            placeholder="Procure um serviço" aria-label="Search">
+        <form class="search_container" role="search" action="pesquisa.php" method="post">
+            <input class="form-control me-2" type="search" name="pesquisa" placeholder="Procure um serviço" aria-label="Search">
             <button type="submit">
                 <span style="font-size: 1.5rem;"><ion-icon name="search-outline"></ion-icon></span> 
             </button>
-        </form> 
+        </form>
         <?php require '../assets/geral/menu.php'; ?>
         <?php require '../assets/geral/navbar_mobile.php'; ?>
         <?php require '../assets/geral/navbar_desktop.php'; ?>

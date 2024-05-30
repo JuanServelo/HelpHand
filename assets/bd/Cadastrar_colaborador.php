@@ -4,9 +4,9 @@ session_start();
 require 'conectar.php';
 
 function verificarsenha($P_senha, $P_senha_confirmacao) {
-    $servername = "localhost:3307";
+    $servername = "localhost:3306";
     $username = "root";
-    $password = "";
+    $password = "PUC@1234";
     $database = "HelpHand";
 
     $conn = new mysqli($servername, $username, $password, $database);
@@ -23,11 +23,12 @@ function verificarsenha($P_senha, $P_senha_confirmacao) {
         $data_de_nascimento = isset($_POST['data_nascimento']) ? $_POST['data_nascimento'] : '';
         $genero = isset($_POST['genero']) ? $_POST['genero'] : '';
         $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
+        $teste = isset($_POST['teste']) ? $_POST['teste'] : '';
 
         $sql_verificar_email = "SELECT * FROM Colaborador WHERE Email = '$email'";
         $resultado = $conn->query($sql_verificar_email);
         $sql_verificar_email_usuario = "SELECT * FROM Usuario WHERE Email = '$email'";
-        $resultado_usuario = $conn->query($sql_verificar_email);
+        $resultado_usuario = $conn->query($sql_verificar_email_usuario);
 
         if ($resultado->num_rows > 0) {
             $_SESSION['erro'] = "Este email já está cadastrado!";
@@ -41,8 +42,8 @@ function verificarsenha($P_senha, $P_senha_confirmacao) {
 
             $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO Colaborador (Nome, Email, Telefone, CPF, Data_nasc, Genero,  Senha)
-            VALUES ('$nome', '$email', '$telefone', '$cpf', '$data_de_nascimento', '$genero', '$senhaCriptografada')";
+            $sql = "INSERT INTO Colaborador (Nome, Email, Telefone, CPF, teste, Data_nasc, Genero,  Senha)
+            VALUES ('$nome', '$email', '$telefone', '$cpf', '$teste', '$data_de_nascimento', '$genero', '$senhaCriptografada')";
 
             if ($conn->query($sql) === TRUE) {
                 echo "Registro inserido com sucesso!";
