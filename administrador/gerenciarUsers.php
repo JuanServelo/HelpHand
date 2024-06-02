@@ -7,10 +7,10 @@ include_once '../assets/bd/sessao.php';
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HelpHand</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/global.css">
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/navbar_adm.css">
+  <title>HelpHand</title>
 </head>
 
 <body class="bg-white">
@@ -32,9 +32,36 @@ include_once '../assets/bd/sessao.php';
   mysqli_query($conn, 'SET character_set_results=utf8');
 
   $sql = "SELECT ID_Usuario, Nome, Email, Senha, Telefone, CPF, Genero, Nota, Foto, Tipo_User, Data_nasc FROM Usuario";
-  echo "<div class='container m-5'>";
+  echo <<<'EOT'
+    <header class="d-flex ">
+      <nav class="navbar p-0">
+        <button class="logo_maozinha p-0" type="button" 
+          data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
+            <img src="../assets/img/logo_preta.png" 
+            class="img-fluid float-start rounded d-block" width="100%" alt="">
+        </button>
+
+        <button type="menu" class="menu d-flex flex-column align-items-center"
+          data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
+            <span><ion-icon name="menu-outline"></ion-icon></span>
+        </button>
+      </nav>
+
+      <form class="search_container" role="search" action="pesquisa.php" method="post">
+        <div class="input__button position-relative">
+          <input class="form-control me-2" type="search" name="pesquisa" placeholder="Procure um serviço" aria-label="Search">
+            <button type="submit">
+                <span style="font-size: 1.5rem;"><ion-icon name="search-outline"></ion-icon></span> 
+            </button>
+        </div>
+      </form>
+    </header>
+  <h1 class="text-center m-4">Gerenciamento de Usuários</h1>
+  EOT;
+
+  echo "<div class='table-responsive mt-5 mb-3' style='margin: 0 5%'>";
   if ($result = mysqli_query($conn, $sql)) {
-    echo "  <table class='table table-striped-columns table-hover'>";
+    echo "  <table class='table table-bordered table-hover'>";
     echo "    <thead>";
     echo "      <tr>";
     echo "        <th scope='col'>ID</th>";
@@ -51,7 +78,7 @@ include_once '../assets/bd/sessao.php';
     echo "        <th scope='col'>Tipo Usuario</th>";
     echo "      </tr>";
     echo "    </thead>";
-    echo "    <tbody>";
+    echo "    <tbody class='table-group-divider '>";
     if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_assoc($result)) {
         $data = $row['Data_nasc'];
@@ -129,6 +156,8 @@ include_once '../assets/bd/sessao.php';
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
 </body>
 
