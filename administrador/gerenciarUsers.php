@@ -46,15 +46,6 @@ include_once '../assets/bd/sessao.php';
             <span><ion-icon name="menu-outline"></ion-icon></span>
         </button>
       </nav>
-
-      <form class="search_container" role="search" action="pesquisa.php" method="post">
-        <div class="input__button position-relative">
-          <input class="form-control me-2" type="search" name="pesquisa" placeholder="Procure um serviço" aria-label="Search">
-            <button type="submit">
-                <span style="font-size: 1.5rem;"><ion-icon name="search-outline"></ion-icon></span> 
-            </button>
-        </div>
-      </form>
     </header>
   <h1 class="text-center m-4">Gerenciamento de Usuários</h1>
   EOT;

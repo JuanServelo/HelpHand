@@ -12,7 +12,6 @@ include_once '../assets/bd/sessao.php';
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="../assets/css/navbar_adm.css">
 </head>
-
 <body class="bg-white">
 
   <header class="d-flex ">
@@ -28,15 +27,6 @@ include_once '../assets/bd/sessao.php';
           <span><ion-icon name="menu-outline"></ion-icon></span>
       </button>
     </nav>
-
-    <form class="search_container" role="search" action="pesquisa.php" method="post">
-        <div class="input__button position-relative">
-          <input class="form-control me-2" type="search" name="pesquisa" placeholder="Procure um serviço" aria-label="Search">
-            <button type="submit">
-                <span style="font-size: 1.5rem;"><ion-icon name="search-outline"></ion-icon></span> 
-            </button>
-        </div>
-    </form>
   </header> 
 
   <?php require '../assets/geral/menu.php'; ?>
