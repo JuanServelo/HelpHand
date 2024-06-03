@@ -10,8 +10,20 @@ include_once '../assets/bd/sessao.php';
   <title>HelpHand</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/global.css">
 </head>
+<style>
+  .navbar {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar .logo_maozinha {
+        width: 15%;
+        margin: 2% 0 0% 2%;
+        background: none;
+        border: none;
+    }
+</style>
 
 <body class="bg-white">
   <?php
@@ -20,13 +32,19 @@ include_once '../assets/bd/sessao.php';
 
   date_default_timezone_set("America/Sao_Paulo");
   $data = date("d/m/Y H:i:s", time());
-  echo "<p class='text' > ";
-  echo "Acesso em: ";
-  echo $data;
-  echo "</p> "
     ?>
-  <div class="container">
-    <h2>Exclusão de Usuario</h2>
+    <header class="d-flex ">
+      <nav class="navbar p-0">
+        <a class="logo_maozinha p-0" type="button" href='..\cadastro.php'>
+          <img src="../assets/img/logo_preta.png" 
+          class="img-fluid float-start rounded d-block" width="100%" alt="">
+        </a>
+      </nav>
+    </header>
+
+  <div class="text-center">
+    <h1>Exclusão de Usuario</h1>
+    <p class='text-center mb-5'>Último acesso em: <?php echo $data; ?></p>
   </div>
 
   <?php
@@ -41,9 +59,9 @@ include_once '../assets/bd/sessao.php';
 
   $sql = "DELETE FROM Usuario WHERE ID_Usuario = $id";
 
-  echo "<div class='card'>";
+  echo "<div class='text-center'>";
   if ($result = mysqli_query($conn, $sql)) {
-    echo "<p>&nbsp;Registro excluído com sucesso! </p>";
+    echo "<p class='text-center fs-3'>&nbsp;Usuário excluído com sucesso! </p>";
   } else {
     echo "<p>&nbsp;Erro executando DELETE: " . mysqli_error($conn) . "</p>";
   }
