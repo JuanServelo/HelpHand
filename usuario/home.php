@@ -9,9 +9,36 @@ include_once '../assets/bd/sessao.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/home.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Home</title>
 </head>
+<style>
+    .container__carrossel {
+        height: 100%;
+        background: var(--cor-principal);
+        border-radius: 20px;
+        margin: 5%;
+    }
+    
+    .row {
+        height: 40vh;
+        padding: 5% 2%;
+    }
+    
+    .col-md-12 {
+        height: 100%;
+    }
+    
+    .featured-carousel {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+
 <body>
     <header>
         <nav class="navbar p-0">
@@ -42,104 +69,171 @@ include_once '../assets/bd/sessao.php';
         <div class="texto d-flex flex-column p-0">
             <h1>Bem-vindo,</h1>
             <h2>Ache aqui a <img src="../assets/img/maozinha 1.png" alt="mãozinha" class="maozinha"> 
-                para os seus problemas!</h2>
+            para os seus problemas!</h2>
         </div>
 
-        <div class="container pt-5">
-            <div class="carousel slide" id="ads">
-
-                <div class="carousel-indicators">
-                    <button type="button" aria-current="true" data-bs-target="#ads" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" aria-label="slide 2" data-bs-target="#ads" data-bs-slide-to="1"></button>
-                </div>
-            
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="card_column col-md-4">
-                                <div class="card_container d-flex justify-content-center align-items-center">
-                                    <div class="card_content d-flex flex-column align-items-center">
-                                        <img src="../assets/img/encanador 3.png" alt="" class="d-block w-75">
-                                        <h5>Eletricista</h5>
-                                        <button class="button_info">Ver Mais</button>                                   
+        <section class="ftco-section">
+            <div class="container__carrossel">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="featured-carousel owl-carousel">
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
+                                    <div class="text border border-top-0 pt-4">
+                                        <h3 class="heading"><a href="#">Mecânicos</a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="card_column col-md-4">
-                                <div class="card_container d-flex justify-content-center align-items-center">
-                                    <div class="card_content d-flex flex-column align-items-center">
-                                        <img src="../assets/img/encanador 3.png" alt="" class="d-block w-75">
-                                        <h5>Jardineiro</h5>
-                                        <button class="button_info">Ver Mais</button>                 
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
+                                    <div class="text border border-top-0 pt-4">
+                                        <h3 class="heading"><a href="#">Eletricistas</a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="card_column col-md-4">
-                                <div class="card_container d-flex justify-content-center align-items-center">
-                                    <div class="card_content d-flex flex-column align-items-center">
-                                        <img src="../assets/img/encanador 3.png" alt="" class="d-block w-75">
-                                        <h5>Mecânico</h5>
-                                        <button class="button_info">Ver Mais</button>
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
+                                    <div class="text border border-top-0 pt-4">
+                                        <h3 class="heading"><a href="#">Jardineiros</a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
+                                    <div class="text border border-top-0 pt-4">
+                                        <h3 class="heading"><a href="#">Encanadores</a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
+                                    <div class="text border border-top-0 pt-4">
+                                        <h3 class="heading"><a href="#">Pintores</a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
+                                    <div class="text border border-top-0 pt-4">
+                                        <h3 class="heading"><a href="#">Fotógrafos</a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
+                                    <div class="text border border-top-0 pt-4">
+                                        <h3 class="heading"><a href="#">Cozinheiros</a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
+                                    <div class="text border border-top-0 pt-4">
+                                        <h3 class="heading"><a href="#">Costureiros</a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="card_column col-md-4">
-                                <div class="card_container d-flex justify-content-center align-items-center">
-                                    <div class="card_content d-flex flex-column align-items-center">
-                                        <img src="../assets/img/encanador 3.png" alt="" class="d-block w-75">
-                                        <h5>Encanador</h5>
-                                        <button class="button_info">Ver Mais</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card_column col-md-4">
-                                <div class="card_container d-flex justify-content-center align-items-center">
-                                    <div class="card_content d-flex flex-column align-items-center">
-                                        <img src="../assets/img/encanador 3.png" alt="" class="d-block w-75">
-                                        <h5>Eletricista</h5>
-                                        <button class="button_info">Ver Mais</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card_column col-md-4">
-                                <div class="card_container d-flex justify-content-center align-items-center">
-                                    <div class="card_content d-flex flex-column align-items-center">
-                                        <img src="../assets/img/encanador 3.png" alt="" class="d-block w-75">
-                                        <h5>Eletricista</h5>
-                                        <button class="button_info">Ver Mais</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-                <div class="botoes-carousel">
-                    <button class="carousel-control-prev" data-bs-target="#ads" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" data-bs-target="#ads" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-
             </div>
-        </div>
+        </section>
     </main>    
     
     <?php require '../assets/geral/rodape.php'; ?>
 
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+          $(".owl-carousel").owlCarousel();
+          
+        });
+        (function($) {
+        var fullHeight = function() {
+                               
+        $('.js-fullheight').css('height', $(window).height());
+        $(window).resize(function(){
+            $('.js-fullheight').css('height', $(window).height());
+        });
+    
+        };
+        fullHeight();
+        
+        var carousel = function() {
+            $('.featured-carousel').owlCarousel({
+            loop:true,
+            autoplay: true,
+            margin:30,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            nav:true,
+            dots: true,
+            autoplayHoverPause: false,
+            items: 1,
+            navText : ["<span class='ion-ios-arrow-back'></span>","<span class='ion-ios-arrow-forward'></span>"],
+            responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+            }
+            });
+        
+        };
+        carousel();
+        
+        })(jQuery);   
+    </script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </html>
