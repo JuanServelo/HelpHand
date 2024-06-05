@@ -1,12 +1,12 @@
 <div class="modal fade" id="modal_logo_maozinha" tabindex="-1" 
-        aria-labelledby="modal_logo_maozinha" aria-hidden="true"> <!--modal do desktop-->
-            <div class="modal-dialog modal-fullscreen m-0">
+        aria-labelledby="modal_logo_maozinha" aria-hidden="true"> 
+            <div class="modal-dialog m-0">
                 <div class="modal-content">
                     <div class="modal-header p-0">
                         <h1 class="modal-title fs-5 text-center" id="modal_logo_maozinha">
                             <img src="../assets/img/logo_preta.png" alt="">
                         </h1>
-                        <button type="button" class="btn-close" 
+                        <button type="button" 
                         data-bs-dismiss="modal" aria-label="Close">
                         <span><ion-icon name="close-circle-outline"></ion-icon></span>
                         </button>
@@ -27,15 +27,17 @@
                             </a>
                         </ol>
                     </div>     
-                    <div class="modal-footer d-flex justify-content-start m-3">
-                        <a href="#" class="profile_picture d-flex justify-content-center align-items-center">
-                            <img src="../assets/img/user 1.png" alt="">
-                        </a>
-                        <a class="profile_picture-text w-50" href="#">
-                            <h3 href="perfil.php"><?php echo $_SESSION['nome'] ?></h3>
-                        </a>
-                        <a class="profile_picture-text w-50" href="../assets/bd/sairusuario.php">
-                            <h3>Logout</h3>
+                    <div class="modal-footer d-flex flex-column">
+                        <div class="profile d-flex align-items-center" style="gap:10px; width:50%; margin-right: 45%">
+                            <a href="#" class="profile_picture">
+                                <img src="../assets/img/user 1.png" alt="">
+                            </a>
+                            <a class="profile_picture-text" href="#">
+                                <h3 class="fs-3" href="perfil.php"><?php echo $_SESSION['nome'] ?></h3>
+                            </a>
+                        </div>
+                        <a class="logout link-underline-danger" href="../assets/bd/sairusuario.php">
+                            <h3 class='fs-5 text-danger '>Logout</h3>
                         </a>
                     </div>
                 </div>
