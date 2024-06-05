@@ -3,7 +3,7 @@ include_once '../assets/bd/sessao.php';
 $email = $_SESSION['email'];
 
 
-$sql = "SELECT Nome, Telefone, Email, CPF, teste, Foto, Genero FROM Usuario WHERE Email = ?";
+$sql = "SELECT Nome, Telefone, Email, CPF, Foto, Genero FROM Usuario WHERE Email = ?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $email);
@@ -57,11 +57,10 @@ $conn->close();
                     <?php } ?>
                     <!-- Dados do perfil -->
                     <div>
-                        <h2 class="nome"><?php echo htmlspecialchars($user['Nome']); ?></h2>
-                        <p class="telefone"><?php echo htmlspecialchars($user['Telefone']); ?></p>
-                        <h2 class="email"><?php echo htmlspecialchars($user['Email']); ?></h2>
-                        <h2 class="cpf"><?php echo htmlspecialchars($user['teste']); ?></h2>
-                        <h2 class="cpf"><?php echo htmlspecialchars($user['CPF']); ?></h2>
+                        <h2 class="nome">Nome: <?php echo htmlspecialchars($user['Nome']); ?></h2>
+                        <p class="telefone">Telefone: <?php echo htmlspecialchars($user['Telefone']); ?></p>
+                        <h2 class="email">E-mail: <?php echo htmlspecialchars($user['Email']); ?></h2>
+                        <h2 class="cpf">CPF: <?php echo htmlspecialchars($user['CPF']); ?></h2>
                     </div>
                 </div>
 
@@ -73,17 +72,14 @@ $conn->close();
                 <div class="col" style="margin-right: 290px;">
                     <h1 class="dados">Meus Dados</h1>
                     <form action="processar_formulario.php" method="POST">
-                        <!-- Nome -->
                         <div class="form-group">
                             <label for="nome" class="form-label">Nome:</label>
                             <input type="text" class="form-control" id="nome" name="nome" value="<?php echo htmlspecialchars($user['Nome']); ?>" required>
                         </div>
-                        <!-- E-mail -->
                         <div class="form-group">
                             <label for="email" class="form-label">E-mail:</label>
                             <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($user['Email']); ?>" required>
                         </div>
-                        <!-- Senha -->
                         <div class="form-group">
                             <label for="senha" class="form-label">Senha:</label>
                             <input type="password" class="form-control" id="senha" name="senha" required>

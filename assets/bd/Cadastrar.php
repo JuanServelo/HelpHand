@@ -23,7 +23,6 @@ function verificarsenha($P_senha, $P_senha_confirmacao) {
         $data_de_nascimento = isset($_POST['data_nascimento']) ? $_POST['data_nascimento'] : '';
         $genero = isset($_POST['genero']) ? $_POST['genero'] : '';
         $senha = isset($_POST['senha']) ? $_POST['senha'] : '';
-        $teste = isset($_POST['teste']) ? $_POST['teste'] : '';
 
         $sql_verificar_email = "SELECT * FROM Usuario WHERE Email = '$email'";
         $resultado = $conn->query($sql_verificar_email);
@@ -36,8 +35,8 @@ function verificarsenha($P_senha, $P_senha_confirmacao) {
 
             $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO Usuario (Nome, Email, Telefone, CPF, teste, Data_nasc, Genero,  Senha)
-            VALUES ('$nome', '$email', '$telefone', '$cpf','$teste', '$data_de_nascimento', '$genero', '$senhaCriptografada')";
+            $sql = "INSERT INTO Usuario (Nome, Email, Telefone, CPF, Data_nasc, Genero,  Senha)
+            VALUES ('$nome', '$email', '$telefone', '$cpf', '$data_de_nascimento', '$genero', '$senhaCriptografada')";
 
             if ($conn->query($sql) === TRUE) {
                 echo "Registro inserido com sucesso!";

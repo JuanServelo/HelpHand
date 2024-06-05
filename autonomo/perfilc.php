@@ -63,7 +63,7 @@ $conn->close();
                             <h2 class="nome"><?php echo htmlspecialchars($user['Nome']); ?></h2>
                             <p class="telefone"><?php echo htmlspecialchars($user['Telefone']); ?></p>
                             <h2 class="email"><?php echo htmlspecialchars($user['Email']); ?></h2>
-                            <h2 class="cpf"><?php echo htmlspecialchars($user['teste']); ?></h2>
+                            <!--<h2 class="cpf"><?php echo htmlspecialchars($user['teste']); ?></h2>-->
                             <h2 class="cpf"><?php echo htmlspecialchars($user['CPF']); ?></h2>
                         </div>
                     <?php else: ?>
