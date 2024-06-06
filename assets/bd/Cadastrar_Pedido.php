@@ -4,7 +4,7 @@ require 'conectar.php';
 function cadastrar($P_ID_Colaborador, $P_ID_Usuario, $P_ID_Endereco) {
     $servername = "localhost:3306";
     $username = "root";
-    $password = "PUC@1234";
+    $password = "";
     $database = "HelpHand";
 
     $conn = new mysqli($servername, $username, $password, $database);

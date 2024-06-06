@@ -104,14 +104,15 @@
             margin-top: -5vw;
         }
         .bot{
-            width: 8vw;
+            width: 6vw;
             height: 2vw;
             background-color: #304B47;
             color: white;
             border: none;
             border-radius: 30px;
             font-size: 1vw;
-            margin-left: 2vw;
+            margin: 1vw;
+
         }
     }
     @media (max-width: 999px) {
