@@ -11,7 +11,7 @@ include_once '../assets/bd/sessao.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
-    <link rel="stylesheet" href="../assets/css/navbar_adm.css">
+    <link rel="stylesheet" href="../assets/css/navbar_.css">
     <link rel="stylesheet" href="../assets/css/home.css">
     <title>Home</title>
 </head>
@@ -69,13 +69,12 @@ include_once '../assets/bd/sessao.php';
                 <span style="font-size: 1.5rem;"><ion-icon name="search-outline"></ion-icon></span> 
             </button>
         </form>
-        
+    </header>
         <?php require '../assets/geral/menu.php'; ?>
         <?php require '../assets/geral/navbar_.php'; ?>
-    </header>
 
     <main>
-        <div class="textos d-flex flex-column p-0">
+        <div class="texto d-flex flex-column p-0">
             <h1>Bem-vindo,</h1>
             <h2>Ache aqui a <img src="../assets/img/maozinha 1.png" alt="mãozinha" class="maozinha"> 
             para os seus problemas!</h2>

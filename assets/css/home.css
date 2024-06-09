@@ -2,12 +2,12 @@
 
     /*MAIN - TEXTO*/
 
-    .textos h2 {
+    .texto h2 {
         font-size: 2rem;
         margin: 0;
     }
 
-    .textos h2 .maozinha {
+    .texto h2 .maozinha {
         width: 14%;
         margin: 5px 6px 5px 6px;
         animation: waveImage 2s infinite;
@@ -171,12 +171,12 @@
 
 @media (min-width: 999px) {
     /*MAIN - TEXTO*/
-    .textos {
+    .texto {
         width: 50%;
         margin: 1% auto;
     }
 
-    .textos h2 .maozinha {
+    .texto h2 .maozinha {
         width: 10%;
         margin: 5px 6px 10px 7px;
     }
