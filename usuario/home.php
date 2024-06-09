@@ -16,6 +16,12 @@ include_once '../assets/bd/sessao.php';
     <title>Home</title>
 </head>
 <style>
+    @media (max-width: 768px) {
+        .texto {
+            margin: 9%;
+        }
+    }
+
     .container__carrossel {
         height: 100%;
         background: var(--cor-principal);

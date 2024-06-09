@@ -1,3 +1,6 @@
+::-webkit-scrollbar {
+    display: none;
+}
 /*     MOBILE     */
 
     /*MAIN - TEXTO*/
@@ -18,7 +21,7 @@
     /*CARROSSEL*/
     .owl-carousel .owl-dots {
         text-align: center;
-        margin-top: 20px; 
+        margin-top: 50px; 
     }
 
     .owl-carousel .owl-dots .owl-dot {
@@ -122,6 +125,16 @@
 }
 
 @media (max-width: 768px) {
+    .texto {
+        width: 50%;
+        margin: 1% auto;
+    }
+
+    .texto h2 .maozinha {
+        width: 10%;
+        margin: 5px 6px 10px 7px;
+    }
+
     .row2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
