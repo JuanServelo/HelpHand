@@ -7,11 +7,12 @@ include_once '../assets/bd/sessao.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <link rel="stylesheet" href="../assets/css/navbar_adm.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
     <title>Home</title>
 </head>
 <style>
@@ -19,12 +20,12 @@ include_once '../assets/bd/sessao.php';
         height: 100%;
         background: var(--cor-principal);
         border-radius: 20px;
-        margin: 5%;
+        margin: 0% 5%;
     }
     
     .row {
-        height: 40vh;
-        padding: 5% 2%;
+        height: 42vh;
+        padding: 4% 2%;
     }
     
     .col-md-12 {
@@ -33,23 +34,31 @@ include_once '../assets/bd/sessao.php';
     
     .featured-carousel {
         height: 100%;
-        display: flex;
-        align-items: center;
     }
-</style>
 
+    .blog-entry {
+        height: 29vh;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card {
+        height: 100%;
+    } 
+</style>
 
 <body>
     <header>
         <nav class="navbar p-0">
-            <button class="logo_maozinha navbar-toggler p-0" type="button" 
+            <button class="logo_maozinha p-0" type="button" 
             data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
                 <img src="../assets/img/logo_preta.png" 
                 class="img-fluid float-start rounded d-block" width="100%" alt="">
             </button>
 
             <button type="menu" class="menu d-flex flex-column align-items-center"
-            data-bs-toggle="modal" data-bs-target="#modal_menu">
+            data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
                 <span><ion-icon name="menu-outline"></ion-icon></span>
             </button>
         </nav>
@@ -60,13 +69,13 @@ include_once '../assets/bd/sessao.php';
                 <span style="font-size: 1.5rem;"><ion-icon name="search-outline"></ion-icon></span> 
             </button>
         </form>
+        
         <?php require '../assets/geral/menu.php'; ?>
-        <?php require '../assets/geral/navbar_mobile.php'; ?>
-        <?php require '../assets/geral/navbar_desktop.php'; ?>
+        <?php require '../assets/geral/navbar_.php'; ?>
     </header>
 
     <main>
-        <div class="texto d-flex flex-column p-0">
+        <div class="textos d-flex flex-column p-0">
             <h1>Bem-vindo,</h1>
             <h2>Ache aqui a <img src="../assets/img/maozinha 1.png" alt="mãozinha" class="maozinha"> 
             para os seus problemas!</h2>
@@ -74,102 +83,87 @@ include_once '../assets/bd/sessao.php';
 
         <section class="ftco-section">
             <div class="container__carrossel">
-                <div class="row">
+                <div class="row" style="padding: 3% 2%">
                     <div class="col-md-12">
                         <div class="featured-carousel owl-carousel">
+                            
                             <div class="item">
-                                <div class="blog-entry">
-                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
-                                    <div class="text border border-top-0 pt-4">
-                                        <h3 class="heading"><a href="#">Mecânicos</a></h3>
-                                        <div class="d-flex align-items-center mt-4">
-                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
-                                        </div>
-                                    </div>
+                                <div class="blog-entry d-flex flex-column align-items-center">
+                                    <a href="#" class="card" style="width:100%">
+                                        <img src="..\assets\img\encanador 3.png" class="img__card m-auto" style="width:35%">    
+                                        <h3 class="text-center">Jardineiro</h3>
+                                        <button class="btn">Ver Mais</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item" >
+                                <div class="blog-entry d-flex flex-column align-items-center">
+                                    <a href="#" class="card" style="width:100%">
+                                        <img src="..\assets\img\encanador 3.png" class="img__card m-auto" style="width:35%">    
+                                        <h3 class="text-center">Jardineiro</h3>
+                                        <button class="btn">Ver Mais</button>
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="item">
-                                <div class="blog-entry">
-                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
-                                    <div class="text border border-top-0 pt-4">
-                                        <h3 class="heading"><a href="#">Eletricistas</a></h3>
-                                        <div class="d-flex align-items-center mt-4">
-                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
-                                        </div>
-                                    </div>
+                                <div class="blog-entry d-flex flex-column align-items-center">
+                                    <a href="#" class="card" style="width:100%">
+                                        <img src="..\assets\img\encanador 3.png" class="img__card m-auto" style="width:35%">    
+                                        <h3 class="text-center">Jardineiro</h3>
+                                        <button class="btn">Ver Mais</button>
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="item">
-                                <div class="blog-entry">
-                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
-                                    <div class="text border border-top-0 pt-4">
-                                        <h3 class="heading"><a href="#">Jardineiros</a></h3>
-                                        <div class="d-flex align-items-center mt-4">
-                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
-                                        </div>
-                                    </div>
+                                <div class="blog-entry d-flex flex-column align-items-center">
+                                    <a href="#" class="card" style="width:100%">
+                                        <img src="..\assets\img\encanador 3.png" class="img__card m-auto" style="width:35%">    
+                                        <h3 class="text-center">Jardineiro</h3>
+                                        <button class="btn">Ver Mais</button>
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="item">
-                                <div class="blog-entry">
-                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
-                                    <div class="text border border-top-0 pt-4">
-                                        <h3 class="heading"><a href="#">Encanadores</a></h3>
-                                        <div class="d-flex align-items-center mt-4">
-                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
-                                        </div>
-                                    </div>
+                                <div class="blog-entry d-flex flex-column align-items-center">
+                                    <a href="#" class="card" style="width:100%">
+                                        <img src="..\assets\img\encanador 3.png" class="img__card m-auto" style="width:35%">    
+                                        <h3 class="text-center">Jardineiro</h3>
+                                        <button class="btn">Ver Mais</button>
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="item">
-                                <div class="blog-entry">
-                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
-                                    <div class="text border border-top-0 pt-4">
-                                        <h3 class="heading"><a href="#">Pintores</a></h3>
-                                        <div class="d-flex align-items-center mt-4">
-                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
-                                        </div>
-                                    </div>
+                                <div class="blog-entry d-flex flex-column align-items-center">
+                                    <a href="#" class="card" style="width:100%">
+                                        <img src="..\assets\img\encanador 3.png" class="img__card m-auto" style="width:35%">    
+                                        <h3 class="text-center">Jardineiro</h3>
+                                        <button class="btn">Ver Mais</button>
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="item">
-                                <div class="blog-entry">
-                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
-                                    <div class="text border border-top-0 pt-4">
-                                        <h3 class="heading"><a href="#">Fotógrafos</a></h3>
-                                        <div class="d-flex align-items-center mt-4">
-                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
-                                        </div>
-                                    </div>
+                                <div class="blog-entry d-flex flex-column align-items-center">
+                                    <a href="#" class="card" style="width:100%">
+                                        <img src="..\assets\img\encanador 3.png" class="img__card m-auto" style="width:35%">    
+                                        <h3 class="text-center">Jardineiro</h3>
+                                        <button class="btn">Ver Mais</button>
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="item">
-                                <div class="blog-entry">
-                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
-                                    <div class="text border border-top-0 pt-4">
-                                        <h3 class="heading"><a href="#">Cozinheiros</a></h3>
-                                        <div class="d-flex align-items-center mt-4">
-                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="blog-entry">
-                                    <a href="#" class="block-20 d-flex align-items-start imgcarrossel" style="background-image: url('./assets/img/encanador\ 3.png');"></a>
-                                    <div class="text border border-top-0 pt-4">
-                                        <h3 class="heading"><a href="#">Costureiros</a></h3>
-                                        <div class="d-flex align-items-center mt-4">
-                                            <p class="mb-0"><a href="#" class="btn btn-primary cabin2 ">Read More <span ></span></a></p>
-                                        </div>
-                                    </div>
+                                <div class="blog-entry d-flex flex-column align-items-center">
+                                    <a href="#" class="card" style="width:100%">
+                                        <img src="..\assets\img\encanador 3.png" class="img__card m-auto" style="width:35%">    
+                                        <h3 class="text-center">Jardineiro</h3>
+                                        <button class="btn">Ver Mais</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +174,6 @@ include_once '../assets/bd/sessao.php';
     </main>    
     
     <?php require '../assets/geral/rodape.php'; ?>
-
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -188,6 +181,7 @@ include_once '../assets/bd/sessao.php';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function(){
           $(".owl-carousel").owlCarousel();
@@ -207,7 +201,7 @@ include_once '../assets/bd/sessao.php';
         var carousel = function() {
             $('.featured-carousel').owlCarousel({
             loop:true,
-            autoplay: true,
+            autoplay: false,
             margin:30,
             animateOut: 'fadeOut',
             animateIn: 'fadeIn',

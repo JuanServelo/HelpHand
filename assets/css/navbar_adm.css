@@ -213,16 +213,12 @@
     }
 
     .modal{
-        width: 25%;
+        /*width: 25%;*/
         border-radius: 7px;
     }
 
     .modal-content{
         height: 100vh;
-    }
-
-    .modal-header {
-        width: 375.80px;
     }
     
     .modal-header h1 {
@@ -269,7 +265,6 @@
 
     .modal-footer {
         height: 22vh;
-        width: 375.80px;
     }
 
     .modal-footer .profile {
