@@ -34,8 +34,6 @@
                         <input type="text" id="nome" name="nome" required class="form-control mb-3" placeholder="Digite seu nome de usuário">
                         <label id="label">Email</label>
                         <input type="email" id="Email" name="Email" required class="form-control mb-3" placeholder="Digite seu Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Digite um endereço de email válido">
-                        <label id="label">Teste</label>
-                        <input type="text" id="teste" name="teste" required class="form-control mb-3" placeholder="Digite seu teste" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Digite um endereço de teste válido">
                         <div class="label_container">
                             <div class="inputs">
                                 <label id="label">Telefone</label>

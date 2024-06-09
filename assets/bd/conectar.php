@@ -3,6 +3,6 @@
     
     $servername = "localhost:3306";
     $username = "root";
-    $password = "PUC@1234";
+    $password = "";
     $database = "HelpHand";
 ?>

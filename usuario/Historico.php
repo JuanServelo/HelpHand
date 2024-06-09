@@ -10,20 +10,20 @@ include_once '../assets/bd/sessao.php';
 ?>
 <body>
 <style>
-            .bot{
-            width: 8vw;
-            height: 2vw;
-            background-color: #304B47;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            font-size: 1vw;
-            margin-left: 2vw;
-        }
+    .bot {
+        width: 8vw;
+        height: 2vw;
+        background-color: #304B47;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 1vw;
+        margin-left: 2vw;
+    }
 </style>
 <div class="container-fluid">
     <header>
-        <a href="index.php"><img src="../assets/img/logo_preta.png" class="img_logo"></a>
+        <a href="home.php"><img src="../assets/img/logo_preta.png" class="img_logo"></a>
         <div class="titulo"><h1 class="texto_titulo">Historico</h1></div>
     </header>
     <div class='container'>
@@ -34,9 +34,7 @@ include_once '../assets/bd/sessao.php';
         $email = $_SESSION['email'];
         $sql = "SELECT s.*, u.Nome FROM Servico s
                 INNER JOIN Usuario u ON s.fk_Usuario_ID_Usuario = u.ID_Usuario
-                WHERE s.fk_Colaborador_ID_Colaborador IN (
-                    SELECT ID_Colaborador FROM colaborador WHERE email = '$email'
-                )";
+                WHERE u.email = '$email'";
         $result = mysqli_query($conn, $sql);
 
         if ($result && mysqli_num_rows($result) > 0) {
