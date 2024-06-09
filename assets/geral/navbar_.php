@@ -33,10 +33,10 @@
                     </div>     
                     <div class="modal-footer d-flex flex-column">
                         <div class="profile d-flex align-items-center" style="gap:10px; width:50%; margin-right: 45%">
-                            <a href="#" class="profile_picture">
+                            <a href="perfil.php" class="profile_picture">
                                 <img src="../assets/img/user 1.png" alt="">
                             </a>
-                            <a class="profile_picture-text" href="#">
+                            <a class="profile_picture-text" href="perfil.php">
                                 <h3 class="fs-3" href="perfil.php"><?php echo $_SESSION['nome'] ?></h3>
                             </a>
                         </div>
