@@ -28,10 +28,46 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="perfilc.css">
+    <link rel="stylesheet" href="../assets/css/perfil.css">
     <link rel="stylesheet" href="../assets/css/navbar_.css">
     <title>Perfil</title>
 </head>
+<style>
+    .botao{
+        color: white;
+        background-color: #304b47;
+        width: 70%;
+        height: 70%;
+        border-radius: 25px;
+        border: 2px solid #304b47;
+        margin: auto;
+        font-size: 1.5rem;
+        font-weight: 600;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    .botao:hover {
+        transform: scale(1.05);
+        background-color: #304b47;
+        color: white;
+    }
+
+    .user {
+        border: 1px solid black;
+        border-radius: 150px;
+    }
+
+    .header__form a {
+        color: black;
+        font-weight: 600;
+    }
+    
+
+</style>
 <body>
     <header>
         <nav class="navbar p-0">
@@ -58,23 +94,23 @@ $conn->close();
         <section class="d-flex justify-content-center mt-5">
             <div class="row">
                 <!-- Parte do perfil -->
-                <div class="col">
+                <div class="col text-center">
                     <!-- Imagem do perfil -->
                     <?php if ($user['Foto']) { ?>
-                        <div>
+                        <div >
                             <img src="data:image/jpeg;base64,<?php echo base64_encode($user['Foto']);?>" alt="Foto de Perfil">
                         </div>
                         <?php } else { ?>
-                            <div>
-                                <img src="default-avatar.png" class="user">
-                        </div>
+                            <div class="mb-3">
+                                <img src="../assets/img/user 1.png" class="user" style="width:20vw; height:20vw;">
+                            </div>
                     <?php } ?>
                     <!-- Dados do perfil -->
-                    <div>
-                        <h2 class="nome">Nome: <?php echo htmlspecialchars($user['Nome']); ?></h2>
-                        <p class="telefone">Telefone: <?php echo htmlspecialchars($user['Telefone']); ?></p>
-                        <h2 class="email">E-mail: <?php echo htmlspecialchars($user['Email']); ?></h2>
-                        <h2 class="cpf">CPF: <?php echo htmlspecialchars($user['CPF']); ?></h2>
+                    <div class="text-center">
+                        <h3 class="nome">Nome: <?php echo htmlspecialchars($user['Nome']); ?></h3>
+                        <h5 class="telefone">Telefone: <?php echo htmlspecialchars($user['Telefone']); ?></h5>
+                        <h5 class="email">E-mail: <?php echo htmlspecialchars($user['Email']); ?></h5>
+                        <h5 class="cpf">CPF: <?php echo htmlspecialchars($user['CPF']); ?></h5>
                     </div>
                 </div>
 
@@ -82,10 +118,10 @@ $conn->close();
                     <div class="linha-vertical"></div>
                 </div>
                 
-                <div class="col"">
-                    <div class="header__form d-flex flex-row">
+                <div class="container__dados col" style="width: 50vw;">
+                    <div class="header__form d-flex flex-column align-items-center" h-50>
                         <h1 class="dados">Meus Dados</h1>
-                        <a href="#">Editar Dados</a>
+                        <a href="#" >Editar Dados</a>
                     </div>
                     <form action="processar_formulario.php" method="POST">
                         <div class="form-group">
@@ -97,10 +133,18 @@ $conn->close();
                             <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($user['Email']); ?>" required>
                         </div>
                         <div class="form-group">
+                            <label for="telefone" class="form-label">Telefone:</label>
+                            <input type="telefone" class="form-control" id="telefone" name="telefone" value="<?php echo htmlspecialchars($user['Telefone']); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="CPF" class="form-label">CPF:</label>
+                            <input type="CPF" class="form-control" id="CPF" name="CPF" value="<?php echo htmlspecialchars($user['CPF']); ?>" required>
+                        </div>
+                        <div class="form-group">
                             <label for="senha" class="form-label">Senha:</label>
                             <input type="password" class="form-control" id="senha" name="senha" required>
                         </div>
-                        <button type="submit" class="btn btn-primary" name="salvar">Salvar</button>
+                        <input type="submit" value="Cadastrar" class="botao text-center mt-4" >
                     </form>
                 </div>           
             </div>

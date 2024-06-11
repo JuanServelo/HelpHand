@@ -9,41 +9,79 @@ include_once '../assets/bd/sessao.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HelpHand</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="../assets/css/global.css">
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/navbar_.css">
 </head>
+<style>
+  .card {
+    transition: all 0.3s ease;
+    border: none;
+}
 
+  .card:hover {
+      transform: scale(1.05);
+  }
+
+  .card-body{
+      background: #304b47;
+      font-size: 1.5rem;
+      color: white;
+      border-radius: 10px;
+  }
+
+  .card-body:hover{
+      color: white;
+  }
+</style>
 <body class="bg-white">
-<?php require '../assets/geral/menu.php'; ?>
-<?php require '../assets/geral/navbar.php'; ?>
 
-  <div class="container text-center mt-2" >
-    <div class="row g-3 m-5 p-5 align-items-center" style="justify-content: center;">
-      <div class="col-12 col-md-6" style="margin-top:8vw; margin-bottom:8vw;">
-        <div class="card" style="width: 18rem;">
-          <a href="Historico.php" ><img src="../assets/img/encanador 2 (1).png" class="card-img-top bg-warning" alt="..." ></a>
-          <div class="card-body">
-            <h1></h1>
-            <p class="card-text">Historico de Serviços.</p>
-          </div>
+  <header class="d-flex ">
+    <nav class="navbar p-0">
+      <button class="logo_maozinha p-0" type="button" 
+        data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
+          <img src="../assets/img/logo_preta.png" 
+          class="img-fluid float-start rounded d-block" width="100%" alt="">
+      </button>
+
+      <button type="menu" class="menu d-flex flex-column align-items-center"
+        data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
+          <span><ion-icon name="menu-outline"></ion-icon></span>
+      </button>
+    </nav>
+  </header> 
+
+  <?php require '../assets/geral/menu.php'; ?>
+  <?php require '../assets/geral/navbar_.php'; ?>
+
+  <div class="container text-center">
+    <div class="d-sm-flex g-3 m-3 p-5 align-items-center justify-content-center">
+      <div class="d-flex justify-content-center col-12 col-md-6" style="margin-top: 20px">
+        <div class="card shadow-lg" style="width: 18rem; height:22rem">
+          <a class="card-body" href="perfilc.php" style="text-decoration: none">
+            <img src="../assets/img/encanador 2 (1).png" class="card-img-top" alt="..." style="border:none;">
+            <p class="fw-semibold">Perfil</p> 
+          </a>
         </div>
       </div>
-      <div class="col-12 col-md-6">
-        <div class="card" style="width: 18rem;">
-        <a href="perfilc.php" ><img src="../assets/img/encanador 2 (1).png" class="card-img-top bg-warning" alt="..."></a>
-          <div class="card-body">
-            <p class="card-text">Meu perfil.</p>
-          </div>
+
+      <div class=" d-flex justify-content-center col-12 col-md-6" style="margin-top: 20px">
+        <div class="card shadow-lg bg-body-tertiary rounded" style="width: 18rem; height:22rem">
+          <a class="card-body" href="Historico.php" style="text-decoration: none">
+            <img src="../assets/img/encanador 2 (1).png" class="card-img-top" alt="..." style="border:none;">
+            <p class="fw-semibold">Histórico</p> 
+          </a>
         </div>
       </div>
+    </div>
   </div>
 
-  <?php require '../assets/geral/rodape.php'; ?>
+    <?php require '../assets/geral/rodape.php'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>

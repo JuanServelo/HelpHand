@@ -3,7 +3,10 @@
 <head>
     <title>Historico Pedidos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/navbar_.css">
     <link rel="stylesheet" href="../assets/css/Historico.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
 </head>
 <?php
 include_once '../assets/bd/sessao.php';
@@ -23,13 +26,25 @@ include_once '../assets/bd/sessao.php';
 </style>
 <div class="container-fluid">
     <header>
-        <a href="index.php"><img src="../assets/img/logo_preta.png" class="img_logo"></a>
-        <div class="titulo"><h1 class="texto_titulo">Historico</h1></div>
+        <nav class="navbar p-0">
+            <button class="logo_maozinha p-0" type="button" 
+            data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
+                <img src="../assets/img/logo_preta.png" 
+                class="img-fluid float-start rounded d-block" width="100%" alt="">
+            </button>
+
+            <button type="menu" class="menu d-flex flex-column align-items-center"
+            data-bs-toggle="modal" data-bs-target="#modal_logo_maozinha">
+                <span><ion-icon name="menu-outline"></ion-icon></span>
+            </button>
+            </nav>
     </header>
+    <h1 class="text-center mt-4">Historico</h1>
     <div class='container'>
         <?php
         include_once '../assets/bd/sessao.php';
         include_once '../assets/bd/conectar.php';
+        include_once '../assets/geral/navbar_.php';
 
         $email = $_SESSION['email'];
         $sql = "SELECT s.*, u.Nome FROM Servico s
@@ -82,8 +97,10 @@ include_once '../assets/bd/sessao.php';
         ?>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
